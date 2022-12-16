@@ -1,0 +1,11 @@
+#navbar {
+    margin: 0 auto;
+    z-index: 3;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(39, 23, 184);
+    color: red;
+    position: fixed;
+}
