@@ -1,9 +1,10 @@
 #item-container {
-    /* margin-top: 100px; */
-    color: blue;
-    /* position: absolute; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: antiquewhite;
 }
 
-li {
-    margin-top: 5px;
+p {
+    width: 100%;
 }
