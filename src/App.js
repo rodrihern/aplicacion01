@@ -11,8 +11,6 @@ function App() {
       <NavBar />
 
       <ItemListContainer greeting="Hola mundo" />
-
-      <p>Hola</p>
       
 
     </div>
