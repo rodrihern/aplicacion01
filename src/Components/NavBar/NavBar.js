@@ -58,7 +58,7 @@ export const NavBar = () => {
                     
                     
                     <button id='iniciar-sesion' className='hidden-content'>
-                        <FontAwesomeIcon icon={faUser} /> Iniciar Sesion
+                        <FontAwesomeIcon icon={faUser} /> Iniciar Sesión
                     </button>
                     
 
