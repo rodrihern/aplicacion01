@@ -1,48 +1,73 @@
 import './NavBar.css'
 import companyLogo from './Fan store icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
  
 
 export const NavBar = () => {
+
+    function desplegarMenu() {
+        const navs = document.querySelectorAll('.navbar-items')
+        
+        navs.forEach(nav => nav.classList.toggle('navbar-toggleShow'));
+
+        const navbar = document.querySelector('.navbar')
+
+        navbar.classList.toggle('toggle-navSize'); 
+    }
+      
+      /* document.querySelector('.Navbar__Link-toggle').addEventListener('click', desplegarMenu); */
+
     return (
-        <div id="navbar">
-            <div className='content'>
+        <div className='navbar'>
+            
 
             
-            
+
+            <div className='content'>
+
                 <div className='logo'>
                     <a href='#'>
                         <img height={80} src={ companyLogo } alt="Logo de la empresa" />
                     </a>
                 </div>
+            
+        
 
-                
-
-                <a className='nav-link' href="#">Equipos</a>
-                <a className='nav-link' href="#">Selecciones</a>
-                <a className='nav-link' href="#">Retro</a>
-                
-                
-
-                <div className='search-box'>
-                    <input className='search-txt' type="text" placeholder='¿Qué camiseta estas buscando?'/>
-                    <a className='search-btn' href='#'>
-                        <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    </a>   
-                </div>
-                
-                
-                <button id='iniciar-sesion'>
-                    <FontAwesomeIcon icon={faUser} /> Iniciar Sesion
+                <button className='btn-desplegar' onClick={desplegarMenu} >
+                    <FontAwesomeIcon icon={faBars} />
                 </button>
-                
 
-                <a className='cart' href="#">
-                    <div className='cart-number'>4</div>
-                    <FontAwesomeIcon className='fa-lg' icon={faCartShopping} />
-                </a>
+                <nav className='navbar-items'>
+
+                    
+                    
+                    <a className='nav-link hidden-content' href="#">Equipos</a>
+                    <a className='nav-link hidden-content' href="#">Selecciones</a>
+                    <a className='nav-link hidden-content' href="#">Retro</a>
+                    
+                    
+
+                    <div className='search-box hidden-content'>
+                        <input className='search-txt' type="text" placeholder='¿Qué camiseta estas buscando?'/>
+                        <a className='search-btn' href='#'>
+                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                        </a>   
+                    </div>
+                    
+                    
+                    <button id='iniciar-sesion' className='hidden-content'>
+                        <FontAwesomeIcon icon={faUser} /> Iniciar Sesion
+                    </button>
+                    
+
+                    <a className='cart hidden-content' href="#">
+                        <div className='cart-number'>4</div>
+                        <FontAwesomeIcon className='fa-lg' icon={faCartShopping} />
+                    </a>
+
+                </nav>
 
                 
 

@@ -1,12 +1,8 @@
-/*
-    *naranja: #e84118
-    gris oscuro: #292c30
-*/
 
 
-#navbar {
+.navbar {
+    width: 100vw;
     height: 80px;
-    width: 100%;
     padding: 5px; 
     background-color: #e84118;
     color: white;
@@ -24,9 +20,17 @@
     justify-content: space-around;
 }
 
+.navbar-items {
+    display: flex;
+    flex-basis: 85%;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #iniciar-sesion {
     
     padding: 10px;
+    font-size: 13px;
     color: white;
     background-color: #292c30;
     border: none;
@@ -88,6 +92,7 @@
     float: left;
     color: white;
     transition: 0.4s;
+    font-size: 13px;
     line-height: 25px;
 
 }
@@ -126,8 +131,71 @@
     color: #292c30;
 }
 
+.btn-desplegar {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+}
 
 
+@media (max-width: 768px) {
 
+    
+    .navbar {
+        height: 120px;
+    }
+
+    .content, .navbar-items {
+        flex-direction: column;
+    }
+
+    .content {
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+
+    }
+
+    .navbar-items {
+        display: none;
+    }
+
+    
+
+    
+
+    .navbar-toggleShow {
+        display: flex;
+    }
+
+    .toggle-navSize {
+        height: 100vh;
+    }
+
+
+    .logo {
+        
+        align-self: flex-start;
+        display: initial;
+        position: absolute;
+        /* left: 5px;
+        top: 5px; */
+        cursor: pointer;
+    }
+
+    .btn-desplegar {
+        align-self: flex-end;
+        top: 40px;
+        display: initial;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .search-txt {
+        width: 220px;
+    }
+}
 
 
