@@ -1,20 +1,48 @@
 .item-count {
-    
     display: flex;
     height: 100px;
     width: 400px;
-    background-color: aqua;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contador, .add-btn {
+    flex-basis: 40%;
+    height: 40px;
 }
 
 .contador {
-    border: 3px solid black;
-}
-
-.barrita {
+    background-color: white;
+    border-radius: 5px;
     display: flex;
-    flex-basis: 80%;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 18px -5px rgba(0,0,0,0.75);
+    
 }
 
-.add-btn {
-    border: 3px solid black;
+.operador {
+    font-size: 25px;
+    background: none;
+    border: none;
+    color: #e84118;
+}
+.operador:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+
+
+.añadir-al-carrito {
+    background: none;
+    color: #e84118;
+    border: 2px solid #e84118;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.añadir-al-carrito:hover {
+    cursor: pointer;
+    opacity: 70%;
 }
