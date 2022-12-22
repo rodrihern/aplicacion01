@@ -3,6 +3,7 @@ import companyLogo from './Fan store icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
+import { CartWidget } from '../CartWidget/CartWidget';
  
 
 export const NavBar = () => {
@@ -62,10 +63,7 @@ export const NavBar = () => {
                     </button>
                     
 
-                    <a className='cart hidden-content' href="#">
-                        <div className='cart-number'>4</div>
-                        <FontAwesomeIcon className='fa-lg' icon={faCartShopping} />
-                    </a>
+                    <CartWidget />
 
                 </nav>
 
