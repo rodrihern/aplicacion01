@@ -1,9 +1,9 @@
 import './ItemListContainer.css'
 
-export const ItemListContainer = ( { greeting } ) => {
+export const ItemListContainer = ( { greeting, children } ) => {
     return (
         <div id="item-container">
-            <h2>{ greeting }</h2>
+            { children }
             
         </div>
     );
