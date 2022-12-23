@@ -6,7 +6,8 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { CartWidget } from '../CartWidget/CartWidget';
  
 
-export const NavBar = () => {
+export const NavBar = ({ onCartNum }) => {
+
 
     function desplegarMenu() {
         const navs = document.querySelectorAll('.navbar-items')
