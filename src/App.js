@@ -13,7 +13,7 @@ function App() {
       
 
       <ItemListContainer greeting="Hola mundo">
-        <ItemCount producto="Camiseta de boca" />
+        <ItemCount />
       </ItemListContainer>
       
 

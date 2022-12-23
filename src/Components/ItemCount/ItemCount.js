@@ -1,15 +1,20 @@
 import './ItemCount.css'
+import { useState } from 'react'
 
-export const ItemCount = ({ initial = 1, stock = Infinity, producto}) => {
+export const ItemCount = ({ initial = 1, stock = Infinity }) => {
 
-    let counter = 5
+    const [counter, setCounter] = useState(initial)
 
     const onAdd = () => {
-
+        if (counter < stock) {
+            setCounter( counter + 1 )
+        }
     }
 
     const onSubstract = () => {
-        
+        if (counter > 1) {
+            setCounter( counter - 1 )
+        }
     }
 
     return(

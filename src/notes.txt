@@ -3,4 +3,6 @@ gris oscuro: #292c30
 
 definir un color más para resaltar cosas
 
+aprender bs con sass
+
 a los items el boton de "VER DETALLE" para ingresar al producto sea OUTLINE
