@@ -1,10 +1,12 @@
+import './CartWidget.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
-export const CartWidget = () => {
+export const CartWidget = ({ cartNum = 1 }) => {
+
     return (
         <a className='cart hidden-content' href="#">
-            <div className='cart-number'>4</div>
+            <div className='cart-number'>{ cartNum > 9 ? "+9" : cartNum }</div>
             <FontAwesomeIcon className='fa-lg' icon={ faCartShopping } />
         </a>
     );

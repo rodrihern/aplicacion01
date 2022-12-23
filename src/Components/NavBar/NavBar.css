@@ -107,32 +107,6 @@
 
 
 
-.cart {
-    color: #292c30;
-    position: relative;
-}
-
-.cart:hover {
-    color:white;
-}
-
-.cart-number {
-    background-color: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: -15px;
-    left: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.cart:hover > .cart-number {
-    color: #292c30;
-}
-
 .btn-desplegar {
     display: none;
     font-size: 30px;

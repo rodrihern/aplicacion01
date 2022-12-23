@@ -1,0 +1,25 @@
+.cart {
+    color: #292c30;
+    position: relative;
+}
+
+.cart:hover {
+    color:white;
+}
+
+.cart-number {
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart:hover > .cart-number {
+    color: #292c30;
+}
