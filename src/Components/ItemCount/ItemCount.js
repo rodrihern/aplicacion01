@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 
 
-export const ItemCount = ({ initial = 1, stock = Infinity }) => {
+export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }) => {
 
     const [counter, setCounter] = useState(initial)
 
@@ -21,7 +21,8 @@ export const ItemCount = ({ initial = 1, stock = Infinity }) => {
     }
 
     const addToCart = () => {
-        
+        setCartNum( cartNum + counter )
+        setCounter( initial )
     }
 
     return(

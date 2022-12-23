@@ -7,16 +7,16 @@ import { NavBar } from "./Components/NavBar/NavBar";
 
 function App() {
 
-  const [cartNum, setCartNum] = useState("")
+  const [cartNum, setCartNum] = useState(0)
 
 
   return (
     <div>
-      <NavBar onCartNum={setCartNum}/>
+      <NavBar cartNum={cartNum} />
       
 
       <ItemListContainer greeting="Hola mundo">
-        <ItemCount />
+        <ItemCount setCartNum={setCartNum} cartNum={cartNum}/>
       </ItemListContainer>
       
 

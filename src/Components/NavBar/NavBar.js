@@ -6,7 +6,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { CartWidget } from '../CartWidget/CartWidget';
  
 
-export const NavBar = ({ onCartNum }) => {
+export const NavBar = ({ cartNum }) => {
 
 
     function desplegarMenu() {
@@ -64,7 +64,7 @@ export const NavBar = ({ onCartNum }) => {
                     </button>
                     
 
-                    <CartWidget />
+                    <CartWidget cartNum={cartNum}/>
 
                 </nav>
 
