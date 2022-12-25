@@ -1,7 +1,8 @@
 .item-count {
     display: flex;
     height: 100px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
 }
@@ -50,3 +51,4 @@
     cursor: pointer;
     opacity: 70%;
 }
+

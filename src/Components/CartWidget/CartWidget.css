@@ -8,9 +8,10 @@
 }
 
 .cart-number {
+    box-sizing: content-box;
     background-color: white;
-    width: 22px;
-    height: 22px;
+    padding-left: 5px;
+    padding-right: 5px;
     border-radius: 50%;
     position: absolute;
     top: -15px;
@@ -22,4 +23,14 @@
 
 .cart:hover > .cart-number {
     color: #292c30;
+}
+
+.little-num {
+    font-size: 13px;
+    padding: 2px 4px;
+}
+
+.plus99 {
+    font-size: 11px;
+    padding: 3px 1px;
 }

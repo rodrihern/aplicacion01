@@ -9,6 +9,7 @@
     color: white;
     display: flex;
     justify-content: center;
+    transition: 0.4s;
     
     
 }
@@ -135,19 +136,20 @@
     }
 
     .navbar-items {
-        display: none;
+        display: flex;
+        margin-right: -300%;
     }
 
-    
-
-    
-
     .navbar-toggleShow {
-        display: flex;
+        transition-delay: 0.1s;
+        margin-right: 0;
+
     }
 
     .toggle-navSize {
+        position: fixed;
         height: 100vh;
+        transition: 0.4s;
     }
 
 
@@ -156,8 +158,6 @@
         align-self: flex-start;
         display: initial;
         position: absolute;
-        /* left: 5px;
-        top: 5px; */
         cursor: pointer;
     }
 
