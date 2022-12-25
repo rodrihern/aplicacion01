@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/aplicacion01/static/css/main.84c8442f.css",
+    "main.css": "/aplicacion01/static/css/main.3e1205cd.css",
     "main.js": "/aplicacion01/static/js/main.790720b1.js",
     "static/js/787.16f8fbbd.chunk.js": "/aplicacion01/static/js/787.16f8fbbd.chunk.js",
     "static/media/Fan store icon.png": "/aplicacion01/static/media/Fan store icon.8635d56c31a6fa56d21a.png",
     "index.html": "/aplicacion01/index.html",
-    "main.84c8442f.css.map": "/aplicacion01/static/css/main.84c8442f.css.map",
+    "main.3e1205cd.css.map": "/aplicacion01/static/css/main.3e1205cd.css.map",
     "main.790720b1.js.map": "/aplicacion01/static/js/main.790720b1.js.map",
     "787.16f8fbbd.chunk.js.map": "/aplicacion01/static/js/787.16f8fbbd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.84c8442f.css",
+    "static/css/main.3e1205cd.css",
     "static/js/main.790720b1.js"
   ]
 }
