@@ -136,11 +136,13 @@
     }
 
     .navbar-items {
-        display: none;
+        display: flex;
+        margin-left: -300%;
     }
 
     .navbar-toggleShow {
-        display: flex;
+        transition-delay: 0.1s;
+        margin-left: 0;
 
     }
 
