@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/https;//rodrihern.github.io/aplicacion01/static/css/main.d2aa4467.css",
+    "main.js": "/https;//rodrihern.github.io/aplicacion01/static/js/main.4970100f.js",
+    "static/js/787.16f8fbbd.chunk.js": "/https;//rodrihern.github.io/aplicacion01/static/js/787.16f8fbbd.chunk.js",
+    "static/media/Fan store icon.png": "/https;//rodrihern.github.io/aplicacion01/static/media/Fan store icon.8635d56c31a6fa56d21a.png",
+    "index.html": "/https;//rodrihern.github.io/aplicacion01/index.html",
+    "main.d2aa4467.css.map": "/https;//rodrihern.github.io/aplicacion01/static/css/main.d2aa4467.css.map",
+    "main.4970100f.js.map": "/https;//rodrihern.github.io/aplicacion01/static/js/main.4970100f.js.map",
+    "787.16f8fbbd.chunk.js.map": "/https;//rodrihern.github.io/aplicacion01/static/js/787.16f8fbbd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d2aa4467.css",
+    "static/js/main.4970100f.js"
+  ]
+}
