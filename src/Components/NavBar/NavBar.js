@@ -17,9 +17,20 @@ export const NavBar = ({ cartNum }) => {
         const navbar = document.querySelector('.navbar')
 
         navbar.classList.toggle('toggle-navSize'); 
+        
+        console.log(navbar.getAttribute("class"))
+
+        if (navbar.getAttribute("class").match('toggle-navSize')) {
+            navbar.setAttribute("style", "position: fixed;")
+        }
+        else {
+            navbar.removeAttribute("style")
+        }
+
+        
+
+        console.log(navbar)
     }
-      
-      /* document.querySelector('.Navbar__Link-toggle').addEventListener('click', desplegarMenu); */
 
     return (
         <div className='navbar'>
@@ -27,7 +38,7 @@ export const NavBar = ({ cartNum }) => {
 
             
 
-            <div className='content'>
+            <div className='contenido'>
 
                 <div className='logo'>
                     <a href='#'>
@@ -41,32 +52,32 @@ export const NavBar = ({ cartNum }) => {
                     <FontAwesomeIcon icon={faBars} />
                 </button>
 
-                <nav className='navbar-items'>
+                <div className='navbar-items'>
 
                     
                     
-                    <a className='nav-link hidden-content' href="#">Equipos</a>
-                    <a className='nav-link hidden-content' href="#">Selecciones</a>
-                    <a className='nav-link hidden-content' href="#">Retro</a>
+                    <a className='nav-link' href="#">Equipos</a>
+                    <a className='nav-link' href="#">Selecciones</a>
+                    <a className='nav-link' href="#">Retro</a>
                     
                     
 
-                    <div className='search-box hidden-content'>
-                        <input className='search-txt' type="text" placeholder='¿Qué camiseta estas buscando?'/>
-                        <a className='search-btn' href='#'>
+                    <div className='search-box'>
+                        <input className='texto-search' type="text" placeholder='¿Qué camiseta estas buscando?'/>
+                        <a className='boton-search' href='#'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </a>   
                     </div>
                     
                     
-                    <button id='iniciar-sesion' className='hidden-content'>
+                    <button id='iniciar-sesion'>
                         <FontAwesomeIcon icon={faUser} /> Iniciar Sesión
                     </button>
                     
 
                     <CartWidget cartNum={cartNum}/>
 
-                </nav>
+                </div>
 
                 
 
