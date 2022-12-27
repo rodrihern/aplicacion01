@@ -18,18 +18,13 @@ export const NavBar = ({ cartNum }) => {
 
         navbar.classList.toggle('toggle-navSize'); 
         
-        console.log(navbar.getAttribute("class"))
+    }
 
-        if (navbar.getAttribute("class").match('toggle-navSize')) {
-            navbar.setAttribute("style", "position: fixed;")
-        }
-        else {
-            navbar.removeAttribute("style")
-        }
+    function desplegarTexto() {
+        const text = document.querySelector(".texto-search")
 
-        
+        text.classList.toggle("txt-desplegado")
 
-        console.log(navbar)
     }
 
     return (
@@ -63,7 +58,7 @@ export const NavBar = ({ cartNum }) => {
                     
 
                     <div className='search-box'>
-                        <input className='texto-search' type="text" placeholder='¿Qué camiseta estas buscando?'/>
+                        <input className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
                         <a className='boton-search' href='#'>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </a>   

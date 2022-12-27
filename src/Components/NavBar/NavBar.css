@@ -98,7 +98,7 @@
 
 }
 
-.search-box:hover > .texto-search {
+.search-box:hover > .texto-search, .txt-desplegado {
     width: 220px;
     padding-left: 5px;
 
@@ -168,8 +168,9 @@
         cursor: pointer;
     }
 
-    .search-txt {
+    .texto-search {
         width: 220px;
+        padding-left: 5px;
     }
 }
 

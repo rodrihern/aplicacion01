@@ -6,6 +6,8 @@ import { useState } from 'react'
 
 
 
+
+
 export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }) => {
 
     const [counter, setCounter] = useState(initial)
@@ -38,7 +40,7 @@ export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }
             </div>
 
             <div className="add-btn">
-                <button className='añadir-al-carrito' onClick={addToCart}>Añadir al carrito</button> {' '}
+                <button className='añadir-al-carrito' onClick={addToCart}>Añadir al carrito</button>
             </div>
         </div>
     )
