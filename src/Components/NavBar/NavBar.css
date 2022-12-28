@@ -60,7 +60,7 @@
 
 .search-box {
     background-color: #292c30;
-    height: 50px;
+    height: 30px;
     width: auto;
     border-radius: 30px;
     padding: 10px;
@@ -148,7 +148,6 @@
     .toggle-navSize {
         height: 100vh;
         transition: 0.4s;
-        position: fixed;
     }
 
 

@@ -1,0 +1,12 @@
+.catalogo {
+    box-sizing: border-box;    
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+} 
+
+@media (min-width: 1250) {
+    .catalogo {
+        justify-content: space-between;
+    }
+}

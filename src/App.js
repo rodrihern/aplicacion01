@@ -13,10 +13,12 @@ function App() {
   return (
     <div>
       <NavBar cartNum={cartNum} />
+
+      
       
 
       <ItemListContainer greeting="Hola mundo">
-        <ItemCount setCartNum={setCartNum} cartNum={cartNum}/>
+          {/* <ItemCount setCartNum={setCartNum} cartNum={cartNum}/> */}
       </ItemListContainer>
       
 
