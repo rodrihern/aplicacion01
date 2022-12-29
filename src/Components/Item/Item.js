@@ -7,7 +7,7 @@ function Item( {prod} ) {
             <h4>{prod.name}</h4>
             {/* <p>{prod.description}</p> */}
             <p className='precio'>${prod.price}</p>
-            <button className='ver-mas'>Ver más</button>
+            <button className='ver-mas'>Detalle</button>
         </div>
      );
 }

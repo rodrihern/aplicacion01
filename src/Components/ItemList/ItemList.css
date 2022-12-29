@@ -5,6 +5,10 @@
     flex-flow: row wrap;
 } 
 
+.titulo {
+    color: #292c30
+}
+
 @media (min-width: 1250) {
     .catalogo {
         justify-content: space-between;

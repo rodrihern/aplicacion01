@@ -6,3 +6,31 @@ definir un color más para resaltar cosas
 aprender bs con sass
 
 a los items el boton de "VER DETALLE" para ingresar al producto sea OUTLINE
+
+
+Selecciones:
+Argentina 1
+Argentina 2 
+España 
+Brasil 
+Uruguay 
+Francia 
+
+Equipos:
+Boca 
+River 
+Psg 
+Barcelona 
+Real Madrid 
+Manchester City 
+Manchester United 
+Liverpool 
+Juventus 
+
+
+Retro:
+Argentina 86 
+Alemania 90 
+Holanda 88 
+Boca retro 
+river retro https://i.ibb.co/1ZkVH7v/Imagen-2022-12-29-131149191.png
