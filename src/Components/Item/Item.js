@@ -5,12 +5,9 @@ function Item( {prod} ) {
     let name = prod.name
 
 
-    if (window.innerWidth < 670) {
-        name = name.length < 20 ? name : name.slice(0, 11) + "..."
-    }
-
-    console.log(window.innerWidth)
-    
+    /* if (window.innerWidth < 670) {
+        name = name.length < 16 ? name : name.slice(0, 17) + "..."
+    } */
 
 
     return ( 
