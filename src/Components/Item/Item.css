@@ -40,3 +40,28 @@
     color: #e84118;
     background: none;
 }
+
+@media (max-width: 670px) {
+    .producto {
+        padding: 10px;
+        flex-grow: 1;
+        box-sizing: border-box;
+        width: 140px;
+        height: 300px;
+    }
+
+    .producto img {
+        width: 120px;
+        align-self: center;
+    }
+
+    .producto h4 {
+        margin: 5px 0px 0px 0px;
+    }
+
+    .producto p {
+        margin: 10px 0px;
+    }
+
+
+}
