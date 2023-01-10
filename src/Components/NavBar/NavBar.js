@@ -23,27 +23,6 @@ export const NavBar = ({ cartNum }) => {
         
     }
 
-    function desplegarTexto() {
-        const text = document.querySelector(".texto-search")
-
-        text.classList.add("txt-desplegado")
-
-        
-        text.addEventListener("keydown", handleKey)
-
-    }
-
-    function search() {
-        
-        
-
-        const txt = document.getElementById("target")
-
-        navigate(`productos/search/${txt.value}`)
-
-
-    }
-
     function handleKey(e) {
         if (e.key === "Enter") search()
         else if (e.key === "Escape") {
@@ -51,6 +30,22 @@ export const NavBar = ({ cartNum }) => {
             texto.classList.remove("txt-desplegado")
         }
     }
+
+    function desplegarTexto() {
+        const text = document.querySelector(".texto-search")
+
+        text.classList.add("txt-desplegado")
+        text.addEventListener("keydown", handleKey)
+
+    }
+
+    function search() {
+        const txt = document.getElementById("target")
+
+        navigate(`productos/search/${txt.value}`)
+    }
+
+    
 
     
 
@@ -90,7 +85,7 @@ export const NavBar = ({ cartNum }) => {
 
                     <div className='search-box'>
                         <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
-                        <button className='boton-search' onClick={search}>
+                        <button className='boton-search' onClick={() => {search(); desplegarMenu();}}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>   
                     </div>
