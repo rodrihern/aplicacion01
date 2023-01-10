@@ -41,7 +41,7 @@
     background: none;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 650px) {
     .producto {
         padding: 10px;
         flex-grow: 1;

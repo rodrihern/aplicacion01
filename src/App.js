@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { ItemCount } from "./Components/ItemCount/ItemCount";
 import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
 import { NavBar } from "./Components/NavBar/NavBar";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 
 
 
@@ -11,18 +12,27 @@ function App() {
 
 
   return (
-    <div>
+
+    <BrowserRouter>
+    
       <NavBar cartNum={cartNum} />
 
       
+
+     <Routes>
+        <Route path="/" element={<ItemListContainer />}/>
+        <Route path="/productos" element={<ItemListContainer />}/>
+        <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
+        <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
+        <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
+        <Route path="*" element={ <Navigate to={"/"} /> }/>
+        
+      </Routes>
       
 
-      <ItemListContainer greeting="Hola mundo">
-          {/* <ItemCount setCartNum={setCartNum} cartNum={cartNum}/> */}
-      </ItemListContainer>
-      
+    </BrowserRouter>
 
-    </div>
+    
   );
 }
 

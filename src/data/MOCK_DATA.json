@@ -1,200 +1,220 @@
 [
 {
     "id":1,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Titular Argentina - 2022",
-    "description":"Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "description":"Camiseta titular con la que la selección Argentina de Futbol logró su tercer estrella en el mundial de Qatar 2022. Fue utilizada en los partidos contra Arabia Saudita, Mexico, Australia, Paises Bajos, Croacia y Francia. Vestida por el Messias.",
     "image":"https://i.ibb.co/d6Kknjx/Imagen-2022-12-29-113041339.png",
     "price":8000
 },
 
 {
     "id":2,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Suplente Argentina - 2022",
-    "description":"Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue,diam id ornare imperdiet,sapien urna pretium nisl,ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "description":"Camiseta titular con la que la selección Argentina de Futbol logró su tercer estrella en el mundial de Qatar 2022. Fue utilizada contra Polonia en lo que fue una de las mejores actuaciones del conjunto argentino. Vestida por jugadores como Di Maria",
     "image":"https://i.ibb.co/W230LJR/Imagen-2022-12-29-115934927.png",
     "price":8000
 },
 
 {
     "id":3,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"España - 2022",
-    "description":"Cras mi pede,malesuada in,imperdiet et,commodo vulputate,justo. In blandit ultrices enim. Lorem ipsum dolor sit amet,consectetuer adipiscing elit.",
+    "description":"Camiseta titular con la que la selección española de Futbol disputó el mundial de Qatar 2022. Fue utilizada en la historica goleada por 7 a 0 contra Costa Rica. Vestida por jugadores como Pedri.",
     "image":"https://i.ibb.co/fY7p2mf/Imagen-2022-12-29-120247126.png",
     "price":7000
 },
 
 {
     "id":4,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Brasil - 2022",
-    "description":"Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "description":"Camiseta titular con la que la selección brasileña de Futbol disputó el mundial de Qatar 2022. Con esta camiseta la verde amarela  desplegó un futbol de altísimo nivel. Vestida por jugadores como Neymar.",
     "image":"https://i.ibb.co/c2Fn0wT/Imagen-2022-12-29-120406114.png",
     "price":7000
 },
 
 {
     "id":5,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Uruguay - 2022",
-    "description":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "description":"Camiseta titular con la que la selección uruguaya de Futbol disputó el mundial de Qatar 2022. La garra charrua fue algo que sin dudas caracterizo a este equipo. Vestida por jugadores como Luis Suarez.",
     "image":"https://i.ibb.co/Db5FYsJ/Imagen-2022-12-29-120535622.png",
     "price":7000
 },
 
 {
     "id":6,
+    "stock": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Francia - 2022",
-    "description":"Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+    "description":"Camiseta titular con la que la selección fracesa de Futbol disputó el mundial de Qatar 2022. Con esta camiseta Les Bleus llegaron a la final pasando por encima a la mayoría de sus rivales y quedando subcampeona del mundo. Vestida por jugadores como Mbappe.",
     "image":"https://i.ibb.co/VJdVn2J/Imagen-2022-12-29-120742166.png",
     "price":7000
 },
 
 {
     "id":7,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Boca - 2022",
-    "description":"Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "description":"Camiseta titular de Boca Juniors. La azul y oro del año 2022 vestida por jugadores como Marcos Rojo",
     "image":"https://i.ibb.co/7WHRGvv/Imagen-2022-12-29-123912186.png",
     "price":7000
 },
 
 {
     "id":8,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"River - 2022",
-    "description":"Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "description":"Camiseta titular de River Plate en el año 2022. Vestida por jugadores como Enzo Fernandez.",
     "image":"https://i.ibb.co/yRRfxZG/Imagen-2022-12-29-124955546.png",
     "price":7000
 },
 
 {
     "id":9,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Barcelona - 2022",
-    "description":"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "description":"Camiseta titular del Barcelona en el año 2022. Vestida por jugadores como Lewandowski.",
     "image":"https://i.ibb.co/xJv0Jyg/Imagen-2022-12-29-124222384.png",
     "price":7000
 },
 
 {
     "id":10,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Paris Saint German - 2022",
-    "description":"Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
+    "description":"Camiseta titular del PSG en el año 2022. Vestida por the GOAT, Lionel Andres Messi.",
     "image":"https://i.ibb.co/VSGYmPX/Imagen-2022-12-29-124023944.png",
     "price":7000
 },
 
 {
     "id":11,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Juventus - 2022",
-    "description":"In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "description":"Camiseta titular de la Juventus en el año 2022. Esta camiseta de la vecchia signora fue vestida por jugadores como Di Maria.",
     "image":"https://i.ibb.co/N91YNr8/Imagen-2022-12-29-125319342.png",
     "price":7000
 },
 
 {
     "id":12,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Real Madrid - 2022",
-    "description":"Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "description":"Camiseta titular del real madrid con la que logró su champions numero 14 en el año 2022. Esta camiseta merengue fue vestida por Luka Modric",
     "image":"https://i.ibb.co/QKLfWfJ/Imagen-2022-12-29-124358092.png",
     "price":7000
 },
 
 {
     "id":13,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Manchester City - 2022",
-    "description":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "description":"Camiseta titular del Machester City, club donde es idolo el Kun Agüero, en el año 2022. Esta camiseta de los citizens fue vestida por Haaland y Julian Alvarez",
     "image":"https://i.ibb.co/KVtmMKH/Imagen-2022-12-29-124544110.png",
     "price":7000
 },
 
 {
     "id":14,
+    "stock": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Manchester United - 2022",
-    "description":"Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    "description":"Camiseta titular del Manchester united en el año 2022. Esta camiseta de los diablos rojos fue vestida en su ultima temporada en el futbol europeo por nada mas y nada menos que el bicho. SIUUUU",
     "image":"https://i.ibb.co/2Y1nGNm/Imagen-2022-12-29-124638267.png",
     "price":7000
 },
 
 {
     "id":15,
-    "categoria": "equipos",
+    "stock": 10,
+    "categoria": "retro",
     "oferta": false,
-    "name":"Liverpool - 2022",
-    "description":"In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    "image":"https://i.ibb.co/g37xKvg/Imagen-2022-12-29-124818846.png",
+    "name":"Brasil - 1970",
+    "description":"Camiseta titular de la Brasil del '70, la cual se dice que fue la más dominante de la historia del futbol. Esta camiseta fue vestida por nada mas y nada menos que o rey Pelé en su tercera conquista mundialista.",
+    "image":"https://i.ibb.co/5MzS7bZ/Camiseta-pele-1970.png",
     "price":7000
 },
 
 {
     "id":16,
+    "stock": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Argentina - 1986",
-    "description":"Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "description":"Camiseta titular de Argentina en el mítico mundial de Mexico 1986. De más está aclarar que esta camiseta fue utilizada por el D10S del futbol Diego Armando Maradona",
     "image":"https://i.ibb.co/YNjwsqW/Imagen-2022-12-29-125834026.png",
     "price":7000
 },
 
 {
     "id":17,
+    "stock": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Alemania - 1990",
-    "description":"Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "description":"Camiseta titular de Alemania con la que consigue el tricampeonato en el Mundial de Italia 1990. Esta camiseta fue utilizada por jugadores como Lothar Matthaus y Rudi Voller.",
     "image":"https://i.ibb.co/wKT55Jc/Imagen-2022-12-29-130152863.png",
     "price":7000
 },
 
 {
     "id":18,
+    "stock": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Holanda - 1988",
-    "description":"Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+    "description":"Camiseta titular de Holanda en La Euro de 1988, recordada por ser una de las camisetas más lindas de la historia. Fue vestida por Ruud Gullit",
     "image":"https://i.ibb.co/GpHNM6Y/Imagen-2022-12-29-130315385.png",
     "price":7000
 },
 
 {
     "id":19,
+    "stock": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Boca - 1991",
-    "description":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "description":"Camiseta suplente de Boca en el año 1991, recordada por ser una de las más lindas de su historia. Tiene una semejanza a la de alemania 1990 y fue vestida por jugadores como Batistuta y Diego La Torre.",
     "image":"https://i.ibb.co/zRyqsHH/Imagen-2022-12-29-130842674.png",
     "price":7000
 },
 
 {
     "id":20,
+    "stock": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"River - 1996",
-    "description":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "description":"Camiseta titular de River en la obtencion de su segunda compa libertadores en el año 1996. Dicha camiseta fue vestida por jugadores como el burrito Ortega, Crespo y el Enzo Francescolli, ",
     "image":"https://i.ibb.co/1ZkVH7v/Imagen-2022-12-29-131149191.png",
     "price":7000
     }]

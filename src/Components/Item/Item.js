@@ -1,3 +1,4 @@
+import { Link, useNavigate } from 'react-router-dom';
 import './Item.css'
 
 function Item( {prod} ) {
@@ -8,7 +9,11 @@ function Item( {prod} ) {
     /* if (window.innerWidth < 670) {
         name = name.length < 16 ? name : name.slice(0, 17) + "..."
     } */
+    const navigate = useNavigate()
 
+    const handleDetalle = () => {
+        navigate(`/detalle/${prod.id}`)
+    }
 
     return ( 
         <div className='producto'>
@@ -16,7 +21,7 @@ function Item( {prod} ) {
             <h4>{name}</h4>
             {/* <p>{prod.description}</p> */}
             <p className='precio'>${prod.price}</p>
-            <button className='ver-mas'>Detalle</button>
+            <button className='ver-mas' onClick={handleDetalle}>Detalle</button>
         </div>
      );
 }

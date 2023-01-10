@@ -25,8 +25,8 @@ export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }
     }
 
     const addToCart = () => {
-        setCartNum( cartNum + counter )
         setCounter( initial )
+        setCartNum( cartNum + counter )    
     }
 
     return(

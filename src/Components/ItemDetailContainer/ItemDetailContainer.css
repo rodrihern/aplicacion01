@@ -1,0 +1,15 @@
+
+
+.item-detail-container {
+    background-color: antiquewhite;
+    height: 100%;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.item-detail {
+    max-width: 1280px;
+}

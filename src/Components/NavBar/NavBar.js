@@ -4,9 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { CartWidget } from '../CartWidget/CartWidget';
+import { Link, useNavigate } from 'react-router-dom';
  
 
 export const NavBar = ({ cartNum }) => {
+
+    const navigate = useNavigate()
 
 
     function desplegarMenu() {
@@ -25,7 +28,29 @@ export const NavBar = ({ cartNum }) => {
 
         text.classList.toggle("txt-desplegado")
 
+        const texto = document.getElementById("target")
+        texto.addEventListener("keydown", handleEnter)
+
     }
+
+    function search() {
+        
+        
+
+        const txt = document.getElementById("target")
+
+        navigate(`productos/search/${txt.value}`)
+
+
+    }
+
+    function handleEnter(e) {
+        if (e.key === "Enter") search()
+    }
+
+    
+
+    
 
     return (
         <div className='navbar'>
@@ -36,9 +61,9 @@ export const NavBar = ({ cartNum }) => {
             <div className='contenido'>
 
                 <div className='logo'>
-                    <a href='#'>
+                    <Link to='/productos'>
                         <img height={80} src={ companyLogo } alt="Logo de la empresa" />
-                    </a>
+                    </Link>
                 </div>
             
         
@@ -51,17 +76,17 @@ export const NavBar = ({ cartNum }) => {
 
                     
                     
-                    <a className='nav-link' href="#">Equipos</a>
-                    <a className='nav-link' href="#">Selecciones</a>
-                    <a className='nav-link' href="#">Retro</a>
+                    <Link className='nav-link' to="productos/equipos">Equipos</Link>
+                    <Link className='nav-link' to="productos/selecciones">Selecciones</Link>
+                    <Link className='nav-link' to="productos/retro">Retro</Link>
                     
                     
 
                     <div className='search-box'>
-                        <input className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
-                        <a className='boton-search' href='#'>
+                        <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
+                        <button className='boton-search' onClick={search}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
-                        </a>   
+                        </button>   
                     </div>
                     
                     

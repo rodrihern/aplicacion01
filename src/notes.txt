@@ -1,36 +1,11 @@
 naranja: #e84118
 gris oscuro: #292c30
 
-definir un color más para resaltar cosas
-
-aprender bs con sass
-
-a los items el boton de "VER DETALLE" para ingresar al producto sea OUTLINE
 
 
-Selecciones:
-Argentina 1
-Argentina 2 
-España 
-Brasil 
-Uruguay 
-Francia 
-
-Equipos:
-Boca 
-River 
-Psg 
-Barcelona 
-Real Madrid 
-Manchester City 
-Manchester United 
-Liverpool 
-Juventus 
 
 
-Retro:
-Argentina 86 
-Alemania 90 
-Holanda 88 
-Boca retro 
-river retro https://i.ibb.co/1ZkVH7v/Imagen-2022-12-29-131149191.png
+
+* Hacer que se pueda navegar bien al ItemDetail | usando el useParams
+* Hacer que se pueda navegar a las categorias   |
+* Hecer que funcione el ItemCount y lo muestre en el carrito

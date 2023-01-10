@@ -76,10 +76,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
 
 }
 
 .search-box:hover > .boton-search {
+    cursor: pointer;
     background-color: white;
     color: #e84118;
 
