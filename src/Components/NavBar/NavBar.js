@@ -26,10 +26,10 @@ export const NavBar = ({ cartNum }) => {
     function desplegarTexto() {
         const text = document.querySelector(".texto-search")
 
-        text.classList.toggle("txt-desplegado")
+        text.classList.add("txt-desplegado")
 
-        const texto = document.getElementById("target")
-        texto.addEventListener("keydown", handleEnter)
+        
+        text.addEventListener("keydown", handleKey)
 
     }
 
@@ -44,9 +44,15 @@ export const NavBar = ({ cartNum }) => {
 
     }
 
-    function handleEnter(e) {
+    function handleKey(e) {
         if (e.key === "Enter") search()
+        else if (e.key === "Escape") {
+            const texto = document.getElementById("target")
+            texto.classList.remove("txt-desplegado")
+        }
     }
+
+    
 
     
 
@@ -61,7 +67,7 @@ export const NavBar = ({ cartNum }) => {
             <div className='contenido'>
 
                 <div className='logo'>
-                    <Link to='/productos'>
+                    <Link onClick={desplegarMenu} to='/productos'>
                         <img height={80} src={ companyLogo } alt="Logo de la empresa" />
                     </Link>
                 </div>
@@ -76,9 +82,9 @@ export const NavBar = ({ cartNum }) => {
 
                     
                     
-                    <Link className='nav-link' to="productos/equipos">Equipos</Link>
-                    <Link className='nav-link' to="productos/selecciones">Selecciones</Link>
-                    <Link className='nav-link' to="productos/retro">Retro</Link>
+                    <Link onClick={desplegarMenu} className='nav-link' to="productos/equipos">Equipos</Link>
+                    <Link onClick={desplegarMenu} className='nav-link' to="productos/selecciones">Selecciones</Link>
+                    <Link onClick={desplegarMenu} className='nav-link' to="productos/retro">Retro</Link>
                     
                     
 
