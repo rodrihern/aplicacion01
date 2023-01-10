@@ -19,8 +19,13 @@ export const NavBar = ({ cartNum }) => {
 
         const navbar = document.querySelector('.navbar')
 
-        navbar.classList.toggle('toggle-navSize'); 
-        
+        navbar.classList.toggle('toggle-navSize');   
+    }
+
+    function ocultarMenu() {
+        const navbar = document.querySelector('.navbar')
+
+        navbar.classList.remove('toggle-navSize');  
     }
 
     function handleKey(e) {
@@ -62,7 +67,7 @@ export const NavBar = ({ cartNum }) => {
             <div className='contenido'>
 
                 <div className='logo'>
-                    <Link onClick={desplegarMenu} to='/productos'>
+                    <Link onClick={ocultarMenu} to='/productos'>
                         <img height={80} src={ companyLogo } alt="Logo de la empresa" />
                     </Link>
                 </div>
@@ -77,15 +82,15 @@ export const NavBar = ({ cartNum }) => {
 
                     
                     
-                    <Link onClick={desplegarMenu} className='nav-link' to="productos/equipos">Equipos</Link>
-                    <Link onClick={desplegarMenu} className='nav-link' to="productos/selecciones">Selecciones</Link>
-                    <Link onClick={desplegarMenu} className='nav-link' to="productos/retro">Retro</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to="productos/equipos">Equipos</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to="productos/selecciones">Selecciones</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to="productos/retro">Retro</Link>
                     
                     
 
                     <div className='search-box'>
                         <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
-                        <button className='boton-search' onClick={() => {search(); desplegarMenu();}}>
+                        <button className='boton-search' onClick={() => {search(); ocultarMenu();}}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>   
                     </div>
