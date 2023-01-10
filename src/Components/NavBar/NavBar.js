@@ -23,13 +23,21 @@ export const NavBar = ({ cartNum }) => {
     }
 
     function ocultarMenu() {
+
+        const navs = document.querySelectorAll('.navbar-items')
+        
+        navs.forEach(nav => nav.classList.remove('navbar-toggleShow'));
+
         const navbar = document.querySelector('.navbar')
 
         navbar.classList.remove('toggle-navSize');  
     }
 
     function handleKey(e) {
-        if (e.key === "Enter") search()
+        if (e.key === "Enter") {
+            search();
+            ocultarMenu();
+        }
         else if (e.key === "Escape") {
             const texto = document.getElementById("target")
             texto.classList.remove("txt-desplegado")
