@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import PedirItemPorId from '../../helpers/pedirDatos';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
@@ -8,6 +8,7 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
     
     const [item, setItem] = useState(null)
     const { itemId } = useParams()
+    const navigate = useNavigate()
     
 
     useEffect(() => {
@@ -15,6 +16,7 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
             .then((data) => {
                 setItem(data)
             })
+            .catch(() => navigate("/error404"))
     }, [itemId])
 
     return (
