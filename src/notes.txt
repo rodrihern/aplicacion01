@@ -1,11 +1,10 @@
 naranja: #e84118
 gris oscuro: #292c30
 
+Cosas a mejorar:
 
+* agregar un componente <Error404 /> para cuando caigo en un path que no existe en mi app
 
+A futuro:
 
-
-
-* Hacer que se pueda navegar bien al ItemDetail | usando el useParams
-* Hacer que se pueda navegar a las categorias   |
-* Hecer que funcione el ItemCount y lo muestre en el carrito
+* Agregar un inicio de sesion

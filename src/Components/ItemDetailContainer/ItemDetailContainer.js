@@ -8,7 +8,7 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
     
     const [item, setItem] = useState(null)
     const { itemId } = useParams()
-    console.log(itemId)
+    
 
     useEffect(() => {
         PedirItemPorId( Number(itemId) )

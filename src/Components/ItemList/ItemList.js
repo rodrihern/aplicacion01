@@ -17,10 +17,15 @@ function ItemList( {productos} ) {
                 {
                     categoryId ? 
                         productos.map((prod) => prod.categoria === categoryId && <Item className="producto" key={prod.id} prod={prod} />) :
-                        busqueda ?
-                            productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || prod.description.toLowerCase().includes(busqueda.toLowerCase()))
-                            .map((prod) => <Item className="producto" key={prod.id} prod={prod} />) :
-                            productos.map((prod) => <Item className="producto" key={prod.id} prod={prod} />) 
+                        !busqueda ? 
+                            productos.map((prod) => <Item className="producto" key={prod.id} prod={prod} />) :
+                                productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || 
+                                prod.description.toLowerCase().includes(busqueda.toLowerCase())).length > 0 ? 
+                                    productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || 
+                                    prod.description.toLowerCase().includes(busqueda.toLowerCase()))
+                                    .map((prod) => <Item className="producto" key={prod.id} prod={prod} />) :
+                                    <h4 className="no-results">No se han encontrado resultados para '{busqueda}'</h4>
+                             
                 }
                 
             </div>

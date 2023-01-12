@@ -1,7 +1,9 @@
 [
 {
     "id":1,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Titular Argentina - 2022",
@@ -12,7 +14,9 @@
 
 {
     "id":2,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Suplente Argentina - 2022",
@@ -23,7 +27,9 @@
 
 {
     "id":3,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"España - 2022",
@@ -34,7 +40,9 @@
 
 {
     "id":4,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Brasil - 2022",
@@ -45,7 +53,9 @@
 
 {
     "id":5,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Uruguay - 2022",
@@ -56,7 +66,9 @@
 
 {
     "id":6,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Francia - 2022",
@@ -67,7 +79,9 @@
 
 {
     "id":7,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Boca - 2022",
@@ -78,7 +92,9 @@
 
 {
     "id":8,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"River - 2022",
@@ -89,7 +105,9 @@
 
 {
     "id":9,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Barcelona - 2022",
@@ -100,7 +118,9 @@
 
 {
     "id":10,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Paris Saint German - 2022",
@@ -111,7 +131,9 @@
 
 {
     "id":11,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Juventus - 2022",
@@ -122,7 +144,9 @@
 
 {
     "id":12,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Real Madrid - 2022",
@@ -133,7 +157,9 @@
 
 {
     "id":13,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Manchester City - 2022",
@@ -144,7 +170,9 @@
 
 {
     "id":14,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "equipos",
     "oferta": false,
     "name":"Manchester United - 2022",
@@ -155,7 +183,9 @@
 
 {
     "id":15,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Brasil - 1970",
@@ -166,7 +196,9 @@
 
 {
     "id":16,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Argentina - 1986",
@@ -177,7 +209,9 @@
 
 {
     "id":17,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Alemania - 1990",
@@ -188,7 +222,9 @@
 
 {
     "id":18,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Holanda - 1988",
@@ -199,7 +235,9 @@
 
 {
     "id":19,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"Boca - 1991",
@@ -210,7 +248,9 @@
 
 {
     "id":20,
-    "stock": 10,
+    "stockS": 30,
+    "stockM": 20,
+    "stockL": 10,
     "categoria": "retro",
     "oferta": false,
     "name":"River - 1996",
