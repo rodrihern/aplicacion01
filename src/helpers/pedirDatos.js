@@ -10,7 +10,7 @@ export function pedirDatos() {
      );
 }
 
-function PedirItemPorId(id) {
+export function PedirItemPorId(id) {
     return new Promise( (resolve, reject) => {
         setTimeout( () => {
             const item = MOCK_DATA.find((el) => el.id === id)
