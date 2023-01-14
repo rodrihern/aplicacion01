@@ -38,6 +38,7 @@
     /* background: none;
     color: #e84118;
     border: 2px solid #e84118;  */
+    
     border: none;
     background-color: #e84118;
     color: white;  
@@ -50,6 +51,22 @@
 .añadir-al-carrito:hover {
     cursor: pointer;
     opacity: 70%;
+}
+
+.finalizar-compra {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #e84118;
+    border: 2px solid #e84118;
+    background-color: white;
+}
+.finalizar-compra:hover {
+    transition: 0.4s;
+    cursor: pointer;
+    color: white;
+    background-color: #e84118;
 }
 
 
