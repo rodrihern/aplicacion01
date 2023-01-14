@@ -30,9 +30,9 @@ function ItemDetail( {prod, cartNum, setCartNum} ) {
                 <div className='selector-talle'>
                     <p>Talle:</p>
                     <select className='selector' onChange={seleccionar}>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
+                        <option disabled={prod.stockS < 1 && true} value="S">S</option>
+                        <option disabled={prod.stockM < 1 && true} value="M">M </option>
+                        <option disabled={prod.stockL < 1 && true} value="L">L</option>
                     </select>
                 </div>
 

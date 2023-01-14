@@ -28,7 +28,7 @@
 {
     "id":3,
     "stockS": 30,
-    "stockM": 20,
+    "stockM": 0,
     "stockL": 10,
     "categoria": "selecciones",
     "oferta": false,

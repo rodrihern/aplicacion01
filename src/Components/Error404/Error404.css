@@ -73,11 +73,12 @@ body {
     
   }
 
-  .err404 {
+  /* .err404 {
     display: flex;
+    max-width: 100px;
     align-items: center;
     justify-content: space-around;
-  }
+  } */
 
 
 
@@ -87,13 +88,13 @@ body {
     top: 15%;
   }
 
-  /* .err {
+  .err {
     left:28%
   }
 
   .err2 {
     left: 58%
-  } */
+  } 
 
   .far {
     left: 42%;

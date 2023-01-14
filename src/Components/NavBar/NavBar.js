@@ -14,22 +14,15 @@ export const NavBar = ({ cartNum }) => {
 
     function desplegarMenu() {
         const navs = document.querySelectorAll('.navbar-items')
-        
         navs.forEach(nav => nav.classList.toggle('navbar-toggleShow'));
-
         const navbar = document.querySelector('.navbar')
-
         navbar.classList.toggle('toggle-navSize');   
     }
 
     function ocultarMenu() {
-
-        const navs = document.querySelectorAll('.navbar-items')
-        
+        const navs = document.querySelectorAll('.navbar-items')        
         navs.forEach(nav => nav.classList.remove('navbar-toggleShow'));
-
         const navbar = document.querySelector('.navbar')
-
         navbar.classList.remove('toggle-navSize');  
     }
 
@@ -46,25 +39,14 @@ export const NavBar = ({ cartNum }) => {
 
     function desplegarTexto() {
         const text = document.querySelector(".texto-search")
-
         text.classList.add("txt-desplegado")
-        text.addEventListener("keydown", handleKey)
-
     }
 
     function search() {
         const txt = document.getElementById("target")
-
         navigate(`productos/search/${txt.value}`)
+        console.log("buscando")
     }
-
-    
-
-    
-
-    
-
-    
 
     return (
         <div className='navbar'>
@@ -97,7 +79,7 @@ export const NavBar = ({ cartNum }) => {
                     
 
                     <div className='search-box'>
-                        <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} placeholder='¿Qué camiseta estas buscando?'/>
+                        <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} onKeyDown={handleKey} placeholder='¿Qué camiseta estas buscando?'/>
                         <button className='boton-search' onClick={() => {search(); ocultarMenu();}}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>   

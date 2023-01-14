@@ -3,8 +3,10 @@ gris oscuro: #292c30
 
 Cosas a mejorar:
 
-* agregar un componente <Error404 /> para cuando caigo en un path que no existe en mi app
+* ordenar la carpeta components de manera tal que los componentes que son hijos de otros esten adentro de su carpeta
+* modulizar mejor la app para que sea mas legible
+* cuando agrego al carrito quiero mandar 3 parametros (id, cantidad, talle)
 
 A futuro:
 
-* Agregar un inicio de sesion
+* Agregar un inicio de sesion (ver clase 9 hora 1.23.00 la parte de formularios)
