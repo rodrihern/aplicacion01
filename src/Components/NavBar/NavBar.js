@@ -3,7 +3,7 @@ import companyLogo from './Fan store icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { CartWidget } from '../CartWidget/CartWidget';
+import { CartWidget } from './CartWidget/CartWidget';
 import { Link, useNavigate } from 'react-router-dom';
  
 

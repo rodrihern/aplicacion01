@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import {  useNavigate, useParams } from 'react-router-dom';
 import PedirItemPorId from '../../helpers/pedirDatos';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import ItemDetail from './ItemDetail/ItemDetail';
 import './ItemDetailContainer.css'
 
 function ItemDetailContainer({ cartNum, setCartNum }) {

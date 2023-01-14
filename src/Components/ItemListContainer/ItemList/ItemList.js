@@ -1,6 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom";
-import { Error404 } from "../Error404/Error404";
-import Item from "../Item/Item";
+import Item from "./Item/Item";
 import './ItemList.css';
 
 

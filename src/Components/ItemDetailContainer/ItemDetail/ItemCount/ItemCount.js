@@ -3,22 +3,19 @@ import { useState } from 'react'
 
 
 
-
-
-
-
-
 export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }) => {
 
     const [counter, setCounter] = useState(initial)
 
-    const onAdd = () => {
+    counter > stock && setCounter(stock)
+
+    const handleSumar = () => {
         if (counter < stock) {
             setCounter( counter + 1 )
         }
     }
 
-    const onSubstract = () => {
+    const handleRestar = () => {
         if (counter > 1) {
             setCounter( counter - 1 )
         }
@@ -33,9 +30,9 @@ export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }
         <div className="item-count">
 
             <div className="contador" > 
-                    <button className="operador" onClick={onSubstract}>-</button>
+                    <button className="operador" onClick={handleRestar}>-</button>
                     <div >{ counter }</div>  
-                    <button className="operador" onClick={onAdd}>+</button>
+                    <button className="operador" onClick={handleSumar}>+</button>
                     
             </div>
 

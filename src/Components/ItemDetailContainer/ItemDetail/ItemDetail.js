@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from 'react';
-import { ItemCount } from '../ItemCount/ItemCount';
+import { useState } from 'react';
+import { ItemCount } from './ItemCount/ItemCount';
 import './ItemDetail.css'
 
 function ItemDetail( {prod, cartNum, setCartNum} ) {
