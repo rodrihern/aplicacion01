@@ -1,21 +1,6 @@
 naranja: #e84118
 gris oscuro: #292c30
 
-To do list: 
-
-ACTIVIDAD CLASE 9
-
-* cuando agrego al carrito que aparezcan dos botones (pasar a finalizar compra, continuar comprando)
-que pasar a finalizar compra me mande a "/cart" y que continuar comprando sea "navigate(-1)"
-todo esto adentro de <ItemCount />
-y que el carrito tambien me envie alli
-
-* cuando agrego al carrito quiero mandar 3 parametros (id, cantidad, talle) que deben quedar almacenados en el <ItemDetail />
-
-Cosas a mejorar:
-
-* ordenar la carpeta components de manera tal que los componentes que son hijos de otros esten adentro de su carpeta
-* modulizar mejor la app para que sea mas legible
 
 
 A futuro:

@@ -1,15 +1,13 @@
 import './ItemCount.css'
-import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 
 
-export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }) => {
+export const ItemCount = ({ initial=1, stock = Infinity, setCartNum, cartNum, counter, setCounter, isAdded, setIsAdded}) => {
 
-    const [counter, setCounter] = useState(initial)
-    const [isAdded, setIsAdded] = useState(false)
+    
+    
     const navigate = useNavigate()
-
 
     counter > stock && setCounter(stock)
 
@@ -28,7 +26,7 @@ export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }
     const addToCart = () => {
         setIsAdded( true )
         setCounter( initial )
-        setCartNum( cartNum + counter )    
+        setCartNum( cartNum + counter ) 
         
     }
 
@@ -42,7 +40,7 @@ export const ItemCount = ({ initial = 1, stock = Infinity, setCartNum, cartNum }
                     </div>
                     
                     <div className='add-btn'>
-                        <button className='añadir-al-carrito' onClick={() => navigate(-1)} >Seguir Comprando</button>
+                        <button className='añadir-al-carrito seguir-comprando' onClick={() => navigate(-1)} >Seguir comprando</button>
                     </div>
                     
                 </>

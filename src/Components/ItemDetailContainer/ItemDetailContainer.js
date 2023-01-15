@@ -16,8 +16,10 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
             .then((data) => {
                 setItem(data)
             })
-            .catch(() => navigate("/error404"))
-    }, [itemId])
+            .catch(() => {
+                navigate("/error404")
+            })
+    }, [itemId, navigate])
 
     return (
         

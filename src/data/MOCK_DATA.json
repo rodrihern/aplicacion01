@@ -1,7 +1,7 @@
 [
 {
     "id":1,
-    "stockS": 30,
+    "stockS": 0,
     "stockM": 20,
     "stockL": 10,
     "categoria": "selecciones",
@@ -14,9 +14,9 @@
 
 {
     "id":2,
-    "stockS": 30,
-    "stockM": 20,
-    "stockL": 10,
+    "stockS": 0,
+    "stockM": 0,
+    "stockL": 0,
     "categoria": "selecciones",
     "oferta": false,
     "name":"Suplente Argentina - 2022",

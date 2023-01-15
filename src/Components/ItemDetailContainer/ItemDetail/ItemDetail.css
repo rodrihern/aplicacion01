@@ -42,6 +42,25 @@
     margin: 0 auto;
 }
 
+.noStock {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.volver {
+    border: none;
+    font-size: 0.8rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #e84118;
+}
+.volver:hover {
+    cursor: pointer;
+    opacity: 70%;
+}
+
 
 @media (max-width: 768px) {
     .detail-container {
