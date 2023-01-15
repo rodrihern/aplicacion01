@@ -7,7 +7,7 @@ import './ItemDetail.css'
 function ItemDetail( {prod, cartNum, setCartNum} ) {
 
     const [ talle, setTalle ] = useState(prod.stockS > 0 ? "S" : prod.stockM > 0 ? "M" : prod.stockL > 0 && "L")
-    const [ counter, setCounter ] = useState(1)
+    const [ cantidad, setCantidad ] = useState(1)
     const [ isAdded, setIsAdded ] = useState(false)
     const navigate = useNavigate()
     
@@ -18,9 +18,9 @@ function ItemDetail( {prod, cartNum, setCartNum} ) {
 
     if (isAdded) {
         console.log( {
-            id: prod.id,
-            Talle: talle,
-            Cantidad: counter
+            ...prod,
+            talle,
+            cantidad
         } )
     }
     
@@ -64,8 +64,8 @@ function ItemDetail( {prod, cartNum, setCartNum} ) {
                             stock={talle === "S" ? prod.stockS : talle === "M" ? prod.stockM : talle === "L" && prod.stockL} 
                             cartNum={cartNum} 
                             setCartNum={setCartNum} 
-                            counter={counter} 
-                            setCounter={setCounter}
+                            cantidad={cantidad} 
+                            setCantidad={setCantidad}
                             isAdded={isAdded}
                             setIsAdded={setIsAdded}
                         />

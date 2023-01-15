@@ -91,7 +91,7 @@ export const NavBar = ({ cartNum }) => {
                     </button>
                     
 
-                    <CartWidget cartNum={cartNum}/>
+                    <CartWidget cartNum={cartNum} ocultarMenu={ocultarMenu}/>
 
                 </div>
 
