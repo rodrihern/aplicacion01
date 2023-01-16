@@ -1,27 +1,35 @@
 
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../../../Contexts/CartContext';
 import { ItemCount } from './ItemCount/ItemCount';
 import './ItemDetail.css'
 
-function ItemDetail( {prod, cartNum, setCartNum} ) {
+
+function ItemDetail( {prod, initial=1} ) {
 
     const [ talle, setTalle ] = useState(prod.stockS > 0 ? "S" : prod.stockM > 0 ? "M" : prod.stockL > 0 && "L")
-    const [ cantidad, setCantidad ] = useState(1)
-    const [ isAdded, setIsAdded ] = useState(false)
+    const [ cantidad, setCantidad ] = useState(initial)
     const navigate = useNavigate()
+
+    const { addToCart, isAdded, cart } = useContext(CartContext)
     
     const seleccionar = () => {
         const seleccionado = document.querySelector('.selector').value
         setTalle(seleccionado)
     }
 
-    if (isAdded) {
-        console.log( {
+    const handleAgregar = () => {
+        const item =  {
             ...prod,
             talle,
             cantidad
-        } )
+        }
+
+        addToCart(item)
+
+        console.log(cart)
+
     }
     
 
@@ -49,29 +57,41 @@ function ItemDetail( {prod, cartNum, setCartNum} ) {
                         
                     </>
                     :
-                    <>
+                    !isAdded(prod.id) ?
+                        <>
 
-                        <div className='selector-talle'>
-                            <p>Talle:</p>
-                            <select className='selector' onChange={seleccionar} >
-                                <option disabled={prod.stockS < 1 && true} value="S">S</option>
-                                <option disabled={prod.stockM < 1 && true} value="M">M </option>
-                                <option disabled={prod.stockL < 1 && true} value="L">L</option>
-                            </select>
-                        </div>
+                            <div className='selector-talle'>
+                                <p>Talle:</p>
+                                <select className='selector' onChange={seleccionar} >
+                                    <option disabled={prod.stockS < 1 && true} value="S">S</option>
+                                    <option disabled={prod.stockM < 1 && true} value="M">M </option>
+                                    <option disabled={prod.stockL < 1 && true} value="L">L</option>
+                                </select>
+                            </div>
 
-                        <ItemCount 
-                            stock={talle === "S" ? prod.stockS : talle === "M" ? prod.stockM : talle === "L" && prod.stockL} 
-                            cartNum={cartNum} 
-                            setCartNum={setCartNum} 
-                            cantidad={cantidad} 
-                            setCantidad={setCantidad}
-                            isAdded={isAdded}
-                            setIsAdded={setIsAdded}
-                        />
-                        <small className='stock'>Stock: {talle === "S" ? prod.stockS : talle === "M" ? prod.stockM : talle === "L" && prod.stockL}</small>
+                            <ItemCount 
+                                stock={talle === "S" ? prod.stockS : talle === "M" ? prod.stockM : talle === "L" && prod.stockL}
+                                cantidad={cantidad} 
+                                setCantidad={setCantidad}
+                                handleAgregar={handleAgregar}
+                            />
+                            <small className='stock'>Stock: {talle === "S" ? prod.stockS : talle === "M" ? prod.stockM : talle === "L" && prod.stockL}</small>
 
-                    </>
+                        </>
+                        :
+                        <>
+                            <div className='item-count'>
+                                <div className='add-btn'>
+                                    <button className='finalizar-compra' onClick={() => navigate("/cart")}>Finalizar compra</button>
+                                </div>
+                                
+                                <div className='add-btn'>
+                                    <button className='añadir-al-carrito seguir-comprando' onClick={() => navigate(-1)} >Seguir comprando</button>
+                                </div>
+                            </div>
+                            
+                            
+                        </>
                 }
                 
                 

@@ -3,41 +3,15 @@ gris oscuro: #292c30
 
 TO DO LIST: 
 
-* crear el contexto CartContext y que sea un array de los productos agregados al carrito
-
-* que el isAdded sea una funcion que retorne true o false pasandole el id: isAdded(id)
-y que lo busque en el carrito con el metodo .some
-
-* hacer que el numero del carrito sea totalCantidad
-
-* Hacer el componente Cart y cartItem con la funcinalidad de emptyCart y removeItem(id)
+* Hacer el componente Cart y cartItem con la funcinalidad de emptyCart (que pregnte primero si esta seguro de vaciar el carrito)
+ y removeItem(id)
 
 * Volver a ver que onda lo del localStorage de la clase 10 (1.40.00 mas o menos)
 
-REFERENCIAS:
-
-const isAdded = (id) => {
-    return cart.some((item) => item.id === id)
-}
-
-const emptyCart = () => {
-    setCart( [] )
-}
-
-const removeItem = (id) => {
-    setCart( cart.filter((item) => item.id !== id)
-}
-
-const totalPrice = () => {
-    return cart.reduce((acc, item) => acc + item.price * item.cantidad, 0)
-}
-
-const totalCantidad = () => {
-    return cart.reduce((acc, item) => acc + item.cantidad, 0)
-}
 
 
 A futuro:
 
+* Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)
 * Agregar un inicio de sesion (ver after class de la clase 10)
 * agregar la funcionalidad de las ofertas

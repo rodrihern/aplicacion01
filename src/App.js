@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { Error404 } from "./Components/Error404/Error404";
 import { Cart } from "./Components/Cart/Cart";
+import { CartProvider } from "./Contexts/CartContext";
 
 
 
@@ -15,28 +16,32 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    <CartProvider >
+      <BrowserRouter>
     
-      <NavBar cartNum={cartNum} />
-
-      
-
-     <Routes>
-        <Route path="/" element={<ItemListContainer />}/>
-        <Route path="/aplicacion01" element={<ItemListContainer />}/>
-        <Route path="/productos" element={<ItemListContainer />}/>
-        <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
-        <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
-        <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
-        <Route path="/cart" element={ <Cart /> }/>
-        <Route path="*" element={ <Error404 />}/>
-        <Route path="/error404" element={ <Error404 />}/>
+        <NavBar cartNum={cartNum} />
 
         
-      </Routes>
-      
 
-    </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ItemListContainer />}/>
+          <Route path="/aplicacion01" element={<ItemListContainer />}/>
+          <Route path="/productos" element={<ItemListContainer />}/>
+          <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
+          <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
+          <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
+          <Route path="/cart" element={ <Cart /> }/>
+          <Route path="*" element={ <Error404 />}/>
+          <Route path="/error404" element={ <Error404 />}/>
+
+          
+        </Routes>
+        
+
+      </BrowserRouter>
+    </CartProvider>
+
+    
 
     
   );
