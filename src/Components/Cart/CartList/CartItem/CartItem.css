@@ -15,8 +15,16 @@
     align-items: center;
 }
 
-.cart-item-content {
+.left {
     display: flex;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    height: 150px;
+    justify-content: space-between;
 }
 
 .info {
@@ -36,18 +44,67 @@
     font-weight: 600;
 }
 
-.talle, .cantidad {
-    font-size: 14px;
-}
 
 .precio-subtotal {
     color: rgb(21, 187, 21);;
 }
 
-
-.cart-count {
-    
+.remove-btn{
+    height: 50px;
+    width: 50px;
+    border: none;
+    background: none;
+    color: red;
+    font-size: 20px;
+    transition: 0.2s;
+    border-radius: 50%;
 }
+.remove-btn:hover {
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+
+@media (max-width: 768px) {
+
+    .cart-item {
+        box-sizing: border-box;
+        flex-direction: column;
+    }
+
+    .left {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+
+    .info {
+        height: 100px;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    
+
+    .right {
+        margin-top: 20px;
+        flex-direction: row;
+        height: auto;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    
+
+}
+
+
+
 
 
 

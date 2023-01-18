@@ -32,17 +32,11 @@ export const CartProvider = ({ children }) => {
     }
 
     const sumarCantidad = (id) => {
-        const nuevaCantidad = cart.find(item => item.id === id).cantidad + 1
-        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: nuevaCantidad}) : item ) )
-        
+        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: item.cantidad + 1}) : item ) )    
     }
 
     const restarCantidad = (id) => {
-        const nuevaCantidad = cart.find(item => item.id === id).cantidad - 1
-        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: nuevaCantidad}) : item ) )
-
-        
-        
+        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: item.cantidad - 1}) : item ) )    
     }
 
 
