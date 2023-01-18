@@ -1,6 +1,8 @@
 naranja: #e84118
 gris oscuro: #292c30
 
+iconos para vsc material icon theme es el mas lindo
+
 TO DO LIST: 
 
 * Ver las correcciones de la entrega 2
