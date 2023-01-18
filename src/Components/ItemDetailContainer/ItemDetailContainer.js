@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {  useNavigate, useParams } from 'react-router-dom';
 import PedirItemPorId from '../../helpers/pedirDatos';
 import ItemDetail from './ItemDetail/ItemDetail';
-import './ItemDetailContainer.css'
+import '../ItemListContainer/ItemListContainer.css';
 
 function ItemDetailContainer({ cartNum, setCartNum }) {
     
@@ -23,8 +23,8 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
 
     return (
         
-        <div className='item-detail-container'>
-            <div className='item-detail'>
+        <div className='item-container'>
+            <div className='item-content'>
                 {
                     item && <ItemDetail prod={item} cartNum={cartNum} setCartNum={setCartNum}/>
                 }

@@ -12,7 +12,7 @@ export const ItemListContainer = () => {
     useEffect(() => {
         pedirDatos()
             .then((res) => {
-                    setProductos(res)   
+                setProductos(res)   
             })
             .catch((err) => {
                 console.log(err)
@@ -20,7 +20,7 @@ export const ItemListContainer = () => {
     }, [])
 
     return (
-        <div id="item-container">
+        <div className="item-container">
             <div className='item-content'>
 
                 <ItemList productos={productos} />

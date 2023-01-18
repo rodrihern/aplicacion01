@@ -3,8 +3,11 @@ gris oscuro: #292c30
 
 TO DO LIST: 
 
-* Hacer el componente Cart y cartItem con la funcinalidad de emptyCart (que pregnte primero si esta seguro de vaciar el carrito)
- y removeItem(id)
+* para porder modificar la cantidad desde el carrito: 
+    a. buscar un metodo para modificar objetos que me permita hacer lo que yo quiero mas facil
+    b. pasar el set cantidad por todos lados y traerlo hasta el cartCount
+
+* darle estilo a CartItemCount
 
 * Volver a ver que onda lo del localStorage de la clase 10 (1.40.00 mas o menos)
 

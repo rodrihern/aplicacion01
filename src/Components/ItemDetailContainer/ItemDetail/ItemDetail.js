@@ -28,8 +28,6 @@ function ItemDetail( {prod, initial=1} ) {
 
         addToCart(item)
 
-        console.log(cart)
-
     }
     
 

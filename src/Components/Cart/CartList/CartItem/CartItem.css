@@ -1,0 +1,53 @@
+.info p {
+    margin: 0;
+}
+
+.cart-item {
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0px 0px 17px -8px rgba(0,0,0,0.75);
+    margin-top: 20px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-content {
+    display: flex;
+}
+
+.info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.foto {
+    box-sizing: content-box;
+}
+
+
+.nombre, .subtotal {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.talle, .cantidad {
+    font-size: 14px;
+}
+
+.precio-subtotal {
+    color: rgb(21, 187, 21);;
+}
+
+
+.cart-count {
+    
+}
+
+
+

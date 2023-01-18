@@ -31,6 +31,20 @@ export const CartProvider = ({ children }) => {
         return cart.reduce((acc, item) => acc + item.cantidad, 0)
     }
 
+    const sumarCantidad = (id) => {
+        const nuevaCantidad = cart.find(item => item.id === id).cantidad + 1
+        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: nuevaCantidad}) : item ) )
+        
+    }
+
+    const restarCantidad = (id) => {
+        const nuevaCantidad = cart.find(item => item.id === id).cantidad - 1
+        setCart( cart.map( (item) => item.id === id ? Object.defineProperty(item, 'cantidad', {value: nuevaCantidad}) : item ) )
+
+        
+        
+    }
+
 
     return (
         <CartContext.Provider value={{
@@ -40,7 +54,9 @@ export const CartProvider = ({ children }) => {
             removeItem,
             totalPrice,
             totalCantidad,
-            addToCart
+            addToCart,
+            sumarCantidad,
+            restarCantidad
         }}>
             { children }
         </CartContext.Provider>
