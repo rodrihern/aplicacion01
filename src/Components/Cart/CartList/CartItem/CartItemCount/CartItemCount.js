@@ -1,5 +1,5 @@
 
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { CartContext } from '../../../../../Contexts/CartContext'
 import './CartItemCount.css'
 
@@ -9,7 +9,7 @@ import './CartItemCount.css'
 export default function CartItemCount( { item } ) {
 
     
-    const { removeItem, sumarCantidad, restarCantidad } = useContext(CartContext)
+    const { sumarCantidad, restarCantidad } = useContext(CartContext)
 
     const stock = item.talle === "S" ? item.stockS : item.talle === "M" ? item.stockM : item.talle === "L" && item.stockL
     

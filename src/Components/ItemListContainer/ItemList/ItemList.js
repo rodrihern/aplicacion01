@@ -8,6 +8,22 @@ function ItemList( {productos} ) {
     const { categoryId, busqueda} = useParams()
     const navigate = useNavigate()
 
+    const buscar = () => {
+        return (
+            <> 
+                {
+                    productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || prod.description.toLowerCase().includes(busqueda.toLowerCase())).length > 0 
+                        ? 
+                        productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || prod.description.toLowerCase().includes(busqueda.toLowerCase()))
+                        .map((prod) => <Item className="producto" key={prod.id} prod={prod} />) 
+                        :
+                        <h4 className="no-results">No se han encontrado resultados para '{busqueda}'</h4>
+                }
+            </>
+           
+        )
+    }
+
     return ( 
         <div>
 
@@ -16,18 +32,14 @@ function ItemList( {productos} ) {
 
             <div className="catalogo">
                 {
-                    categoryId ? 
+                    categoryId 
+                        ? 
                         productos.filter((prod) => prod.categoria === categoryId).length > 0 ?
                         productos.map((prod) => prod.categoria === categoryId && <Item className="producto" key={prod.id} prod={prod} />) :
-                        navigate("/error404") :
-                        !busqueda ? 
-                            productos.map((prod) => <Item className="producto" key={prod.id} prod={prod} />) :
-                                productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || 
-                                prod.description.toLowerCase().includes(busqueda.toLowerCase())).length > 0 ? 
-                                    productos.filter((prod) => prod.name.toLowerCase().includes(busqueda.toLowerCase()) || 
-                                    prod.description.toLowerCase().includes(busqueda.toLowerCase()))
-                                    .map((prod) => <Item className="producto" key={prod.id} prod={prod} />) :
-                                    <h4 className="no-results">No se han encontrado resultados para '{busqueda}'</h4>
+                        navigate("/error404") 
+                        :
+                        busqueda ? buscar() : productos.map((prod) => <Item className="producto" key={prod.id} prod={prod} />)  
+                                
                              
                 }
                 
