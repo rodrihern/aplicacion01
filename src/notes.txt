@@ -6,6 +6,7 @@ iconos para vsc material icon theme es el mas lindo
 
 TO DO LIST: 
 
+* Ver de hacer bien el deploy en vercel
 * Ver Clase 11
 * Volver a ver que onda lo del localStorage de la clase 10 (1.40.00 mas o menos)
 
@@ -13,7 +14,11 @@ TO DO LIST:
 
 A futuro:
 
-* Hacer que buscar() sea un componente <Buscar/> y renederizarlo en ItemList
 * Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)
 * Agregar un inicio de sesion (ver after class de la clase 10)
 * agregar la funcionalidad de las ofertas
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!
+PARA HACER EL DEPLOY DE VUELTA EN GH PAGES TENGO QUE HACER TODO EL PROCESO DE VUELTA
+!!!!!!!!!!!!!!!!!!!!!!!!
