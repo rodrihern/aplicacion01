@@ -12,7 +12,7 @@ function ItemDetail( {prod, initial=1} ) {
     const [ cantidad, setCantidad ] = useState(initial)
     const navigate = useNavigate()
 
-    const { addToCart, isAdded, cart } = useContext(CartContext)
+    const { addToCart, isAdded } = useContext(CartContext)
     
     const seleccionar = () => {
         const seleccionado = document.querySelector('.selector').value

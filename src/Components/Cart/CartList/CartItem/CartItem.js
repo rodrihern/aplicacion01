@@ -15,7 +15,7 @@ export default function CartItem( {item} ) {
       <div className='left'>
 
         <div className='foto'>
-          <img width={150} src={item.image} /> 
+          <img width={150} src={item.image} alt={item.name}/> 
         </div>
 
         <div className='info'>

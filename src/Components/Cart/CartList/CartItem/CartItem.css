@@ -13,6 +13,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .left {
@@ -50,15 +51,17 @@
 }
 
 .remove-btn{
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     border: none;
     background: none;
     color: red;
     font-size: 20px;
     transition: 0.2s;
     border-radius: 50%;
-}
+    
+    
+} 
 .remove-btn:hover {
     cursor: pointer;
     background-color: red;
@@ -70,6 +73,7 @@
     .cart-item {
         box-sizing: border-box;
         flex-direction: column;
+        position: relative;
     }
 
     .left {
@@ -97,6 +101,12 @@
         justify-content: space-between;
         align-items: center;
 
+    }
+
+    .remove-btn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
     }
 
     
