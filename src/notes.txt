@@ -1,17 +1,19 @@
 naranja: #e84118
 gris oscuro: #292c30
+verde: rgb(21, 187, 21)
 
 iconos para vsc material icon theme es el mas lindo
 
 TO DO LIST: 
 
-* Ver Clase 10
+* Ver Clase 11
 * Volver a ver que onda lo del localStorage de la clase 10 (1.40.00 mas o menos)
 
 
 
 A futuro:
 
+* Hacer que buscar() sea un componente <Buscar/> y renederizarlo en ItemList
 * Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)
 * Agregar un inicio de sesion (ver after class de la clase 10)
 * agregar la funcionalidad de las ofertas

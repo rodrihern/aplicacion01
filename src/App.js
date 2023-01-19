@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
 import { NavBar } from "./Components/NavBar/NavBar";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { Error404 } from "./Components/Error404/Error404";
 import { Cart } from "./Components/Cart/Cart";
@@ -24,8 +24,9 @@ function App() {
         
 
         <Routes>
+  
           <Route path="/" element={<ItemListContainer />}/>
-          <Route path="/aplicacion01" element={ <Navigate to={"/"} />}/>
+          <Route path="/aplicacion01" element={<ItemListContainer />}/>
           <Route path="/productos" element={<ItemListContainer />}/>
           <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
           <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
