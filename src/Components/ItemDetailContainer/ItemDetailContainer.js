@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import {  useNavigate, useParams } from 'react-router-dom';
-import PedirItemPorId from '../../helpers/pedirDatos';
+import { PedirItemPorId } from '../../helpers/pedirDatos';
 import ItemDetail from './ItemDetail/ItemDetail';
 import '../ItemListContainer/ItemListContainer.css';
 

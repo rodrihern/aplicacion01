@@ -4,7 +4,7 @@ export function pedirDatos() {
     return new Promise ( (resolve, reject) => {
         setTimeout( () => {
             resolve(MOCK_DATA)
-        }, 2000)
+        }, 1000)
     }
 
      );
@@ -25,5 +25,5 @@ export function PedirItemPorId(id) {
         }, 500 )
     } );
 }
-
-export default PedirItemPorId;
+/* 
+export default PedirItemPorId; */
