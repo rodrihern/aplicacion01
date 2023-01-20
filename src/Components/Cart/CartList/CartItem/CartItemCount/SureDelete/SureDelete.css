@@ -1,0 +1,58 @@
+.sureDelete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.sureDelete-content {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.botones {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sureDelete-btn {
+    padding: 10px;
+    flex-basis: 30%;
+    border-radius: 5px;
+    border: 2px solid #e84118;
+    
+}
+
+.si {
+    background-color: #e84118;
+    color: white;
+}
+.si:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+.no {
+    background: none;
+    color: #e84118;
+    transition: 0.2s;
+}
+.no:hover {
+    cursor: pointer;
+    background-color: #e84118;
+    color: white;
+}

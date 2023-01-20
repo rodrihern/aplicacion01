@@ -36,9 +36,8 @@ export default function CartItem( {item} ) {
             </button>
         </div>
       <p className='subtotal'>Subtotal: <span className='precio-subtotal'>${item.price * item.cantidad}</span></p>
-        
-        
       </div>
+      
 
     </div>
   )

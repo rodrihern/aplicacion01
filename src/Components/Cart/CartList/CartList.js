@@ -1,16 +1,19 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../../../Contexts/CartContext'
 import CartItem from './CartItem/CartItem'
+import SureDelete from './CartItem/CartItemCount/SureDelete/SureDelete'
+
 import './CartList.css'
 
 
 export default function CartList() {
 
-    const { cart, emptyCart, totalPrice } = useContext(CartContext)
+    const { cart, totalPrice } = useContext(CartContext)
     const navigate = useNavigate()
+    const [dialogTrigger, setDialogTrigger] = useState(false)
 
     const precioTotal = totalPrice()
 
@@ -22,19 +25,17 @@ export default function CartList() {
         <hr />
 
         <div className='carrito'>
-                
-
             {
                 cart.length > 0
                     ?
                     <>
                         {
-                            cart.map(item => <CartItem item={item} />)
+                            cart.map(item => <CartItem key={item.id} item={item} />)
                         }
 
                         <h3 className='precio-final'>Precio Final: ${precioTotal}</h3>
 
-                        <button className='boton vaciar-carrito' onClick={emptyCart}>
+                        <button className='boton vaciar-carrito' onClick={() => setDialogTrigger(true)}>
                             <FontAwesomeIcon icon={ faTrash } /> Vaciar carrito   
                         </button>
                     </>
@@ -48,6 +49,8 @@ export default function CartList() {
                         <button className='boton seguir-comprando' onClick={() => navigate("/productos")}>Seguir Comprando</button>
                     </>
             }
+
+            <SureDelete trigger={dialogTrigger} setTrigger={setDialogTrigger} />
 
         </div>
     </div>
