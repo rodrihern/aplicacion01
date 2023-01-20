@@ -1,5 +1,5 @@
 import { React, useContext } from 'react'
-import { CartContext } from '../../../../../../Contexts/CartContext'
+import { CartContext } from '../../../../Contexts/CartContext'
 import './SureDelete.css'
 
 function SureDelete( { trigger, setTrigger } ) {

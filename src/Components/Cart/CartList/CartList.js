@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { CartContext } from '../../../Contexts/CartContext'
 import CartItem from './CartItem/CartItem'
-import SureDelete from './CartItem/CartItemCount/SureDelete/SureDelete'
+import SureDelete from './SureDelete/SureDelete'
 
 import './CartList.css'
 

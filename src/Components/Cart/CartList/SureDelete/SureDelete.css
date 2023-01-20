@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
 
+
 }
 
 .sureDelete-content {
@@ -19,6 +20,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    max-width: 401px;
+
 }
 
 .botones {
@@ -55,4 +58,10 @@
     cursor: pointer;
     background-color: #e84118;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .sureDelete-content {
+        width: 70%;
+    }
 }

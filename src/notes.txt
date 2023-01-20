@@ -6,9 +6,11 @@ iconos para vsc material icon theme es el mas lindo
 
 TO DO LIST: 
 
-* Ver de hacer bien el deploy en vercel
 * Ver Clase 11
-* Volver a ver que onda lo del localStorage de la clase 10 (1.40.00 mas o menos)
+////////////////////////
+comer
+////////////////////////
+* Ver Clase 12
 
 
 
