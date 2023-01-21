@@ -1,18 +1,16 @@
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useContext, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { CartContext } from '../../../Contexts/CartContext'
 import CartItem from './CartItem/CartItem'
 import SureDelete from './SureDelete/SureDelete'
-
 import './CartList.css'
 
 
 export default function CartList() {
 
     const { cart, totalPrice } = useContext(CartContext)
-    const navigate = useNavigate()
     const [dialogTrigger, setDialogTrigger] = useState(false)
 
     const precioTotal = totalPrice()
@@ -46,7 +44,7 @@ export default function CartList() {
                         <div className='carrito-vacio'>
                             <h3>El carrito esta vacío</h3>
                         </div>
-                        <button className='boton seguir-comprando' onClick={() => navigate("/productos")}>Seguir Comprando</button>
+                        <Link className='boton seguir-comprando' to={"/productos"}>Seguir Comprando</Link>
                     </>
             }
 

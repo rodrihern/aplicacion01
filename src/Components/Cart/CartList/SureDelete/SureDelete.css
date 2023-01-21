@@ -42,10 +42,13 @@
 
 .si {
     background-color: #e84118;
+    transition: 0.2s;
     color: white;
 }
 .si:hover {
     cursor: pointer;
+    background: none;
+    color: #e84118; 
     opacity: 75%;
 }
 

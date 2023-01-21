@@ -31,9 +31,12 @@
     width: 25px;
     color: white;
     font-size: 1rem;
-}
-.operator:hover {
     cursor: pointer;
-    opacity: 75%;
 }
+
+.disabled {
+    opacity: 70%;
+    cursor: default;
+}
+
 

@@ -27,10 +27,13 @@
     background: none;
     border: none;
     color: #e84118;
-}
-.operador:hover {
     cursor: pointer;
+}
+
+
+.deshabilitado {
     opacity: 50%;
+    cursor: default;
 }
 
 
@@ -71,6 +74,7 @@
 
 .seguir-comprando {
     font-size: 14px;
+    transition: 0.4s;
 }
 
 

@@ -22,9 +22,15 @@ export default function CartItemCount( { item } ) {
                 <p>Cantidad: </p> 
                 <div className="counter" >
                         
-                    <button className="operator" onClick={() => item.cantidad > 1 && restarCantidad(item.id)}>-</button>
+                    <button 
+                        className={`operator ${item.cantidad > 1 ? '' : 'disabled'}`} 
+                        onClick={() => item.cantidad > 1 && restarCantidad(item.id)}
+                    >-</button>
                     <div >{ item.cantidad }</div>  
-                    <button className="operator" onClick={() => item.cantidad < stock && sumarCantidad(item.id)}>+</button>
+                    <button 
+                        className={`operator ${item.cantidad < stock ? '' : 'disabled'}`} 
+                        onClick={() => item.cantidad < stock && sumarCantidad(item.id)}
+                    >+</button>
                         
                 </div>
             </div>

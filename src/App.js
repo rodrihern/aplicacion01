@@ -21,7 +21,7 @@ function App() {
     
         <NavBar cartNum={cartNum} />
 
-        
+       
 
         <Routes>
   
@@ -36,7 +36,7 @@ function App() {
           <Route path="/error404" element={ <Error404 />}/>
 
           
-        </Routes>
+        </Routes> 
         
 
       </BrowserRouter>

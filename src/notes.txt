@@ -12,15 +12,14 @@ comer
 ////////////////////////
 * Ver Clase 12
 
+* Hacer un componente de cargando para la aplicacion <Loader />
+
 
 
 A futuro:
 
+* Agregar un inicio de sesion (ver after class de la clase 10) --> hacerlo con promesa para practicar
 * Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)
-* Agregar un inicio de sesion (ver after class de la clase 10)
+cuando agregue el boton de elegir otro talle del mismo producto, condicionar con if return
 * agregar la funcionalidad de las ofertas
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!
-PARA HACER EL DEPLOY DE VUELTA EN GH PAGES TENGO QUE HACER TODO EL PROCESO DE VUELTA
-!!!!!!!!!!!!!!!!!!!!!!!!

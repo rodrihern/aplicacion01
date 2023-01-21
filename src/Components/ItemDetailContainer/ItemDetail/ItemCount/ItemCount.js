@@ -25,9 +25,9 @@ export const ItemCount = ({ stock = Infinity, cantidad, setCantidad, handleAgreg
         
                 
             <div className="contador" > 
-                    <button className="operador" onClick={handleRestar}>-</button>
+                    <button className={ `operador ${cantidad > 1 ? '' : 'deshabilitado'}` } onClick={handleRestar}>-</button>
                     <div >{ cantidad }</div>  
-                    <button className="operador" onClick={handleSumar}>+</button>
+                    <button className={ `operador ${cantidad < stock ? '' : 'deshabilitado'}` } onClick={handleSumar}>+</button>
                     
             </div>
             
