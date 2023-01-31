@@ -72,9 +72,9 @@ export const NavBar = ({ cartNum }) => {
 
                     
                     
-                    <Link onClick={ocultarMenu} className='nav-link' to="productos/equipos">Equipos</Link>
-                    <Link onClick={ocultarMenu} className='nav-link' to="productos/selecciones">Selecciones</Link>
-                    <Link onClick={ocultarMenu} className='nav-link' to="productos/retro">Retro</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to={'/productos/equipos'}>Equipos</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to="/productos/selecciones">Selecciones</Link>
+                    <Link onClick={ocultarMenu} className='nav-link' to="/productos/retro">Retro</Link>
                     
                     
 

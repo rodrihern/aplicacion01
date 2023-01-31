@@ -10,7 +10,7 @@ function ItemDetail( {prod, initial=1} ) {
 
     const [ talle, setTalle ] = useState(prod.stockS > 0 ? "S" : prod.stockM > 0 ? "M" : prod.stockL > 0 && "L")
     const [ cantidad, setCantidad ] = useState(initial)
-    const navigate = useNavigate(talle === "S")
+    const navigate = useNavigate()
 
     const { addToCart, isAdded } = useContext(CartContext)
     

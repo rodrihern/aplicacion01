@@ -26,14 +26,14 @@ function App() {
         <Routes>
   
           <Route path="/" element={<ItemListContainer />}/>
-          <Route path="/aplicacion01" element={<ItemListContainer />}/>
           <Route path="/productos" element={<ItemListContainer />}/>
           <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
           <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
           <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
           <Route path="/cart" element={ <Cart /> }/>
-          <Route path="*" element={ <Error404 />}/>
           <Route path="/error404" element={ <Error404 />}/>
+          <Route path="/*" element={ <Error404 />}/>
+          
 
           
         </Routes> 

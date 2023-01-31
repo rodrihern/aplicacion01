@@ -4,10 +4,11 @@ import { PedirItemPorId } from '../../helpers/pedirDatos';
 import ItemDetail from './ItemDetail/ItemDetail';
 import '../ItemListContainer/ItemListContainer.css';
 import Loader from '../Loader/Loader';
+import { Error404 } from '../Error404/Error404';
 
 function ItemDetailContainer({ cartNum, setCartNum }) {
     
-    const [item, setItem] = useState(null)
+    const [item, setItem] = useState(false)
     const [loading, setLoading] = useState(false)
     const { itemId } = useParams()
     const navigate = useNavigate()
@@ -19,8 +20,8 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
             .then((data) => {
                 setItem(data)
             })
-            .catch(() => {
-                navigate("/error404")
+            .catch((err) => {
+                console.log(err);
             })
             .finally(() => {
                 setLoading(false)
@@ -33,13 +34,15 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
         
         <div className='item-container'>
 
-            {
-                loading && <Loader />
-            }
+            
 
             <div className='item-content'>
                 {
-                    item && <ItemDetail prod={item} cartNum={cartNum} setCartNum={setCartNum}/>
+                    loading 
+                        ? 
+                        <Loader /> 
+                        :
+                        item ? <ItemDetail prod={item} cartNum={cartNum} setCartNum={setCartNum} isLoading/> : <Error404 />
                 }
             </div>
             

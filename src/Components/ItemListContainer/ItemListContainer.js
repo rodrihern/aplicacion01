@@ -35,7 +35,7 @@ export const ItemListContainer = () => {
 
             <div className='item-content'>
 
-                <ItemList productos={productos} />
+                <ItemList productos={productos} isLoading={loading} />
                 
                 
             </div>
