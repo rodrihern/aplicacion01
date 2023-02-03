@@ -1,8 +1,10 @@
 import './ItemListContainer.css'
 import { useEffect, useState } from 'react';
 import ItemList from './ItemList/ItemList';
-import { pedirDatos } from '../../helpers/pedirDatos';
 import Loader from '../Loader/Loader';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '../../firebase/config';
+
 
 export const ItemListContainer = () => {
 
@@ -14,16 +16,25 @@ export const ItemListContainer = () => {
 
     useEffect(() => {
         setLoading(true)
-        pedirDatos()
+        
+        //referencia
+        const productosRef = collection(db, "productos")
+        //peticion asincronica
+        getDocs(productosRef)
             .then((res) => {
-                setProductos(res)   
+                setProductos( res.docs.map((doc) => {
+                    return {
+                        ...doc.data(),
+                        id: doc.id
+
+                    }
+                }) )
             })
-            .catch((err) => {
-                console.log(err)
-            })
+            .catch((err) => console.log(err))
             .finally(() => {
                 setLoading(false)
             })
+
     }, [])
 
     return (

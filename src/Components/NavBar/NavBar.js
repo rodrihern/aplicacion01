@@ -2,9 +2,10 @@ import './NavBar.css'
 import companyLogo from './Fan store icon.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { CartWidget } from './CartWidget/CartWidget';
 import { Link, useNavigate } from 'react-router-dom';
+import IniciarSesion from './IniciarSesion/IniciarSesion';
+
  
 
 export const NavBar = ({ cartNum }) => {
@@ -86,9 +87,7 @@ export const NavBar = ({ cartNum }) => {
                     </div>
                     
                     
-                    <button id='iniciar-sesion'>
-                        <FontAwesomeIcon icon={faUser} /> Iniciar Sesión
-                    </button>
+                    <IniciarSesion />
                     
 
                     <CartWidget cartNum={cartNum} ocultarMenu={ocultarMenu}/>

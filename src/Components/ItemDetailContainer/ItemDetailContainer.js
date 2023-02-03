@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import {  useNavigate, useParams } from 'react-router-dom';
-import { PedirItemPorId } from '../../helpers/pedirDatos';
 import ItemDetail from './ItemDetail/ItemDetail';
 import '../ItemListContainer/ItemListContainer.css';
 import Loader from '../Loader/Loader';
 import { Error404 } from '../Error404/Error404';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../../firebase/config';
 
 function ItemDetailContainer({ cartNum, setCartNum }) {
     
@@ -16,13 +17,14 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
 
     useEffect(() => {
         setLoading(true)
-        PedirItemPorId( Number(itemId) )
-            .then((data) => {
-                setItem(data)
+        //referencia
+        const docRef = doc(db, "productos", itemId)
+        //peticion
+        getDoc(docRef)
+            .then((res) => {
+                setItem( { ...res.data(), id: res.id } )
             })
-            .catch((err) => {
-                console.log(err);
-            })
+            .catch(err => console.log(err))
             .finally(() => {
                 setLoading(false)
             })
@@ -42,7 +44,7 @@ function ItemDetailContainer({ cartNum, setCartNum }) {
                         ? 
                         <Loader /> 
                         :
-                        item ? <ItemDetail prod={item} cartNum={cartNum} setCartNum={setCartNum} isLoading/> : <Error404 />
+                        item ? <ItemDetail prod={item} cartNum={cartNum} setCartNum={setCartNum} /> : <Error404 />
                 }
             </div>
             

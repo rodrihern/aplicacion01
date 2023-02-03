@@ -4,19 +4,32 @@ verde: rgb(21, 187, 21)
 
 TO DO LIST: 
 
-* Agregar un inicio de sesion (ver after class de la clase 10) --> hacerlo con promesa para practicar
+Miercoles:
 * Ver Clase 12
-* Ver after class firebase
+
+
+Jueves:
+* hacer un context de login para poder usar un useState del usuario 
+* usar el login de google que sea un componente en el navbar (donde esta ahora el boton de iniciar sesion)
+
+
+Viernes:
 * Ver Clase 13
-* Ver Clase 14
+* Ver clase 14
+
+Sabado:
+* Laburar mucho
 
 
 
 
-A futuro:
+A agregar cuando este listo:
 
 
+* ver que onda con el evento blur para el input de buscar
 * Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)
 cuando agregue el boton de elegir otro talle del mismo producto, condicionar con if return
+* poder ordenar por precio
 * agregar la funcionalidad de las ofertas
+
 

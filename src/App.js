@@ -6,6 +6,7 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import { Error404 } from "./Components/Error404/Error404";
 import { Cart } from "./Components/Cart/Cart";
 import { CartProvider } from "./Contexts/CartContext";
+import { LoginProvider } from "./Contexts/LoginContext";
 
 
 
@@ -15,32 +16,34 @@ function App() {
 
 
   return (
+    <LoginProvider>
+      <CartProvider >
+        <BrowserRouter>
+      
+          <NavBar cartNum={cartNum} />
 
-    <CartProvider >
-      <BrowserRouter>
-    
-        <NavBar cartNum={cartNum} />
-
-       
-
-        <Routes>
-  
-          <Route path="/" element={<ItemListContainer />}/>
-          <Route path="/productos" element={<ItemListContainer />}/>
-          <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
-          <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
-          <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
-          <Route path="/cart" element={ <Cart /> }/>
-          <Route path="/error404" element={ <Error404 />}/>
-          <Route path="/*" element={ <Error404 />}/>
-          
-
-          
-        </Routes> 
         
 
-      </BrowserRouter>
-    </CartProvider>
+          <Routes>
+    
+            <Route path="/" element={<ItemListContainer />}/>
+            <Route path="/productos" element={<ItemListContainer />}/>
+            <Route path="/productos/:categoryId" element={<ItemListContainer />}/>
+            <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
+            <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
+            <Route path="/cart" element={ <Cart /> }/>
+            <Route path="/error404" element={ <Error404 />}/>
+            <Route path="/*" element={ <Error404 />}/>
+            
+
+            
+          </Routes> 
+          
+
+        </BrowserRouter>
+      </CartProvider>
+    </LoginProvider>
+    
 
     
 
