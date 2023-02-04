@@ -24,9 +24,20 @@
 .vaciar-carrito {
     
     background-color: red;
-    align-self: flex-start;
     font-size: 1rem;
     
+}
+
+.comprar {
+    background-color: #e84118;
+    font-size: 1rem;
+}
+
+.cart-buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .seguir-comprando {

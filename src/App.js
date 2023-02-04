@@ -7,6 +7,7 @@ import { Error404 } from "./Components/Error404/Error404";
 import { Cart } from "./Components/Cart/Cart";
 import { CartProvider } from "./Contexts/CartContext";
 import { LoginProvider } from "./Contexts/LoginContext";
+import Checkout from "./Components/Cart/CartList/Checkout/Checkout";
 
 
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/productos/search/:busqueda" element={<ItemListContainer />}/>
             <Route path="/detalle/:itemId" element={<ItemDetailContainer cartNum={cartNum} setCartNum={setCartNum}/>}/>
             <Route path="/cart" element={ <Cart /> }/>
+            <Route path="/checkout" element={ <Checkout /> }/>
             <Route path="/error404" element={ <Error404 />}/>
             <Route path="/*" element={ <Error404 />}/>
             
