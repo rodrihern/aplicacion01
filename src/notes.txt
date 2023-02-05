@@ -9,11 +9,12 @@ verde: rgb(21, 187, 21)
 
 TO DO LIST:
 
+* ver que onda que cuando hago el pedido aparece por un instante el formulario
 * usar validaciones para los datos (si puedo ver de usar regex god)
 * que cuando cambio el stock no sea un alert
 * modulizar mejor el checkout
-* Ver clase 14
 * ver que onda con el evento blur para el input de buscar
+* Ver clase 14
 
 * poder ordenar por precio
 * Agregar que se pueda añadir tambien otro talle de la misma prenda --> el isAdded va a tener que recibir (id, talle)

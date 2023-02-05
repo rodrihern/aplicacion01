@@ -84,7 +84,7 @@ function ItemDetail( {prod, initial=1} ) {
                                 </div>
                                 
                                 <div className='add-btn'>
-                                    <button className='añadir-al-carrito seguir-comprando' onClick={() => navigate(-1)} >Seguir comprando</button>
+                                    <button className='añadir-al-carrito seguir-comprando' onClick={() => navigate("/")} >Seguir comprando</button>
                                 </div>
                             </div>
                             
