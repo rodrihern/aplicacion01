@@ -7,7 +7,7 @@ import { Error404 } from "./Components/Error404/Error404";
 import { Cart } from "./Components/Cart/Cart";
 import { CartProvider } from "./Contexts/CartContext";
 import { LoginProvider } from "./Contexts/LoginContext";
-import Checkout from "./Components/Cart/CartList/Checkout/Checkout";
+import Checkout from "./Components/Checkout/Checkout";
 
 
 

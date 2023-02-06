@@ -3,20 +3,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { addDoc, collection, query, where, writeBatch, documentId, getDocs } from 'firebase/firestore'
 import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { CartContext } from '../../../../Contexts/CartContext'
-import { LoginContext } from '../../../../Contexts/LoginContext'
-import { db } from '../../../../firebase/config'
-import '../../../ItemListContainer/ItemListContainer.css'
-import Loader from '../../../Loader/Loader'
+import { CartContext } from '../../Contexts/CartContext'
+import { LoginContext } from '../../Contexts/LoginContext'
+import { db } from '../../firebase/config'
+import '../ItemListContainer/ItemListContainer.css'
+import Loader from '../Loader/Loader'
 import './Checkout.css'
 
 function Checkout() {
 
-    const { cart, totalPrice, emptyCart } = useContext(CartContext)
+    const { cart, totalPrice, emptyCart, removeItem } = useContext(CartContext)
     const { user } = useContext(LoginContext)
     const navigate = useNavigate()
     const [orderId, setOrderId] = useState(null)
     const [loading, setLoading] = useState(false)
+    const [isValid, setIsValid] = useState({
+        nombre: true,
+        direccion: true,
+        telefono: true
+    })
+
+    
+    
+
 
     const [values, setValues] = useState({
         nombre: '',
@@ -36,6 +45,15 @@ function Checkout() {
 
 
 
+    useEffect(() => {
+        setIsValid({
+            nombre: true,
+            direccion: true,
+            telefono: true
+        })
+    }, [values])
+
+
     const handleInputChange = (e) => {
         setValues({
             ...values,
@@ -47,11 +65,16 @@ function Checkout() {
         setLoading(true)
         e.preventDefault()
 
+        
+
         const orden = {
             cliente: values,
             items: cart,
             total: totalPrice()
         }
+
+
+        
 
         const ordenesRef = collection(db, 'ordenes')
         const productosRef = collection(db, 'productos')
@@ -74,28 +97,78 @@ function Checkout() {
                 else if (item.talle === 'M') {
                     batch.update(doc.ref, {stockM: stock - item.cantidad})
                 } 
-                else {
+                else if (item.talle === 'L') {
                     batch.update(doc.ref, {stockL: stock - item.cantidad})
                 }
+            }
+            else {
+                outOfStock.push(item)
             }
         })
         
         if (outOfStock.length === 0) {
-            batch.commit()
-                .then(() => {
-                    setLoading(true)
-                    addDoc(ordenesRef, orden)
-                        .then((doc) => {
-                            setOrderId(doc.id)
-                            emptyCart()
-                        })
-                        .catch((err) => console.log(err))
-                        .finally(setLoading(false))
 
+            const numberValidatorRegex = new RegExp('^.?[0-9]?[0-9]? ?[0-9]? ?[0-9]{10}$')
+            const nameValidatorRegex = new RegExp('^[a-zA-Z]{2,}$')
+            const dirValidatorRegex = new RegExp('^[a-zA-Z]{2,} [0-9]{1,}$')
+            
+
+            if (!nameValidatorRegex.test(values.nombre)) {
+                setIsValid({
+                    ...isValid,
+                    "nombre": false
                 })
+                setLoading(false)
+
+            }
+            else if (!numberValidatorRegex.test(values.telefono)) {
+                setIsValid({
+                    ...isValid,
+                    "telefono": false
+                })
+                setLoading(false)
+
+            }
+            else if (!dirValidatorRegex.test(values.direccion)) {
+                setIsValid({
+                    ...isValid,
+                    "direccion": false
+                })
+                setLoading(false)
+
+            }
+            else {
+
+                batch.commit()
+                    .then(() => {
+                        setLoading(true)
+                        addDoc(ordenesRef, orden)
+                            .then((doc) => {
+                                setOrderId(doc.id)
+                                emptyCart()
+                                setLoading(false)
+                                
+                            })
+                            .catch((err) => {
+                                console.log(err)
+                                setLoading(false)
+                            })
+
+                    })
+
+            }
+            
+
+
+            
         }
         else {
-            alert("Hay productos sin stock")
+            
+            outOfStock.forEach((prod) => {
+                alert(`No hay stock de ${prod.name}`)
+                removeItem(prod.id)
+            })
+            setLoading(false)
             /*
             !!!!!!!!!!!!!!!
             Mostrar que productos son los que ya no tienen stock
@@ -123,17 +196,7 @@ function Checkout() {
         )
     }
 
-    if (loading) {
-        return (
-            <div className='item-container'>
-                <div className='item-content'>
-
-                    <Loader />
-                    
-                </div>
-            </div>
-        )
-    }
+    
 
     
 
@@ -161,6 +224,18 @@ function Checkout() {
         )
     }   
 
+    if (loading) {
+        return (
+            <div className='item-container'>
+                <div className='item-content'>
+
+                    <Loader />
+                    
+                </div>
+            </div>
+        )
+    }
+
 
 
 
@@ -187,6 +262,9 @@ function Checkout() {
                         value={values.nombre}
                         placeholder='Ingrese su nombre'
                     />
+                    {
+                        !isValid.nombre && <p className='invalido'>Nombre inválido</p>
+                    }
                     <input
                         className='form-input' 
                         onChange={handleInputChange}
@@ -195,6 +273,9 @@ function Checkout() {
                         value={values.telefono}
                         placeholder='Ingrese su numero de teléfono'
                     />
+                    {
+                        !isValid.telefono && <p className='invalido'>Teléfono inválido, debe ser "+## # ##########" o "##########"</p>
+                    }
                     <input
                         className='form-input' 
                         onChange={handleInputChange}
@@ -203,6 +284,9 @@ function Checkout() {
                         value={values.direccion}
                         placeholder='Ingrese su dirección'
                     />
+                    {
+                        !isValid.direccion && <p className='invalido'>Dirección inválida, debe contener al menos la calle y la altura ej: "micalle 123"</p>
+                    }
                     <button className='submit-btn boton comprar'>Hacer Pedido</button>
                 </form>
                  

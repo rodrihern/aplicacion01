@@ -32,10 +32,6 @@ export const NavBar = ({ cartNum }) => {
             search();
             ocultarMenu();
         }
-        else if (e.key === "Escape") {
-            const texto = document.getElementById("target")
-            texto.classList.remove("txt-desplegado")
-        }
     }
 
     function desplegarTexto() {
@@ -80,7 +76,18 @@ export const NavBar = ({ cartNum }) => {
                     
 
                     <div className='search-box'>
-                        <input  id='target' className='texto-search' type="text" onClick={desplegarTexto} onKeyDown={handleKey} placeholder='¿Qué camiseta estas buscando?'/>
+                        <input  
+                            id='target' 
+                            className='texto-search' 
+                            type="text" 
+                            onKeyDown={handleKey} 
+                            onBlur={() => {
+                                const texto = document.getElementById("target")
+                                texto.classList.remove("txt-desplegado")
+                            }} 
+                            onFocus={desplegarTexto} 
+                            placeholder='¿Qué camiseta estas buscando?'
+                        />
                         <button className='boton-search' onClick={() => {search(); ocultarMenu();}}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} />
                         </button>   
