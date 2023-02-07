@@ -109,7 +109,7 @@ function Checkout() {
         
         if (outOfStock.length === 0) {
 
-            const numberValidatorRegex = new RegExp('^\+?[0-9]?[0-9]? ?[0-9]? ?[0-9]{10}$')
+            const numberValidatorRegex = new RegExp('^.?[0-9]?[0-9]? ?[0-9]? ?[0-9]{10}$')
             const nameValidatorRegex = new RegExp('^[a-zA-Z]{2,}$')
             const dirValidatorRegex = new RegExp('^[a-zA-Z]{2,} [0-9]{1,}$')
             
