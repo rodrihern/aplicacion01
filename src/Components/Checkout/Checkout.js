@@ -22,6 +22,7 @@ function Checkout() {
         direccion: true,
         telefono: true
     })
+    
 
     
     
@@ -165,9 +166,10 @@ function Checkout() {
         else {
             
             outOfStock.forEach((prod) => {
-                alert(`No hay stock de ${prod.name}`)
+                alert(`No hay más stock de ${prod.name}`)
                 removeItem(prod.id)
             })
+            navigate("/cart")
             setLoading(false)
             /*
             !!!!!!!!!!!!!!!
