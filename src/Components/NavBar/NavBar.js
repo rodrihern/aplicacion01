@@ -6,11 +6,12 @@ import { CartWidget } from './CartWidget/CartWidget';
 import { Link, useNavigate } from 'react-router-dom';
 import IniciarSesion from './IniciarSesion/IniciarSesion';
 
- 
+
 
 export const NavBar = ({ cartNum }) => {
 
     const navigate = useNavigate()
+
 
 
     function desplegarMenu() {
